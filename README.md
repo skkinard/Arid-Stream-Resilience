@@ -18,8 +18,8 @@ Spring 2017 surveys indicated compositional shifts in fish and invertebrate comm
 - R map generation
 
 #### User Guide:
-- data.zip: /source_data & /preparation --> /clean_data
-- data/source_data: original data files
+- data/source_data: original data files (Too big to upload)
+- data/map_data: map data (too big to upload)
 - data/preparation: scripts to clean and compile data
 - data/clean_data: cleaned and compiled data to be used in analyses
 - exploration.zip: calculation/ + markdown/
