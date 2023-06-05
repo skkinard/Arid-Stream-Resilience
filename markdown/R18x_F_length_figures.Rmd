@@ -1,0 +1,182 @@
+---
+title: "Explore Fish Length 2017-2018: Figures"
+author: "Sean Kinard"
+date: "2023-02-09"
+output: 
+  pdf_document: 
+    fig_caption: yes
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r R Setup, include = F, echo=F, message=F}
+#------------------------------------------------------------------------------
+# Setup: Clear Global Environment & load tools for analytical scripts
+#------------------------------------------------------------------------------
+
+# Clean Workspace
+rm(list=ls())
+
+# Data Tools
+library(tidyverse)
+library(lubridate)
+library(BiodiversityR)
+library(car)
+
+# Plot Tools
+library(paletteer)
+library(ggsignif)
+library(patchwork)
+library(knitr)
+library("ggpmisc")
+library(ggrepel)
+library(kableExtra)
+library(ggpubr)
+library(ggbiplot)
+
+site_order <- c("TR", "SF", "AR", "MR", "PD", "PL", "GC", "WM", "EM")
+
+my_colors <- c('#F5191CFF', '#E78200FF', '#E8A117FF',
+               '#EABB22FF', '#CBC988FF', '#9FC095FF',
+               '#6BB699FF', '#3DAAA6FF', '#3B99B1FF')
+
+#------------------------------------------------------------------------------
+# End setup
+```
+
+```{r Analyses, include=F, echo=F, message=F}
+#------------------------------------------------------------------------------
+# Load Scripts to Populate Global Environment with Figures and Tables
+#------------------------------------------------------------------------------
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+
+source('R_Scripts/035_T_Length.R')
+
+#------------------------------------------------------------------------------
+# End Analyses
+```
+
+\newpage
+
+## Figure 1 -  vs Rainfall: Boxplot
+
+```{r Figure 1, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+T_Length_com_vs_site
+```
+
+Figure 1. Length of fish (mm) at each sampling location from from
+2017, 2018, and 2020. 2017 contains 3 months following hurricane Harvey, 2018
+contains monthly samples from January through October, and 2020 contains
+quarterly sampling.
+
+\newpage
+
+## Figure 2 - Length vs Diatom Concentration
+
+```{r Figure 2, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+T_Length_com_vs_diatoms
+```
+
+Figure 2.Average fish length (mm) versus diatom chlorophyll concentrations for 2017, 2018, and 2020. Both axes are log transformed.
+
+\newpage
+
+## Figure 3 - Length vs 2-Week Maximum Discharge
+
+```{r Figure 3, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+T_Length_com_vs_qmax
+```
+
+Figure 3.Average fish length (mm) versus maximum discharge in the two weeks prior to sampling for 2017, 2018, and 2020. Both axes are log transformed.
+
+\newpage
+
+## Figure 4 - Length vs Nitrate Concentrations
+
+```{r Figure 4, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+T_Length_com_vs_nitrate
+```
+
+Figure 4.Average fish length (mm) versus nitrate concentrations for 2017, 2018, and 2020. Both axes are log transformed.
+
+\newpage
+
+## Figure 5 - Length vs Time: Community 
+
+```{r Figure 5, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+T_Length_com_vs_time
+```
+
+Figure 5.Average fish length (mm) versus day of the year for 2017, 2018, and 2020. Densities and smoothed regression curves are are colored by annual rainfall and a region-wide (all sites) smoothed regression is in dark grey.
+
+\newpage
+
+## Figure 6 - Length vs Time: Families 
+
+```{r Figure 6, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+T_Length_fam_vs_time
+```
+
+Figure 6. Average length of fish (mm) in prominent taxonomic families plotted against the day of the year in 2017, 2018, and 2020. Vertical axes vary in scale to aid visualization of trends within taxanomic families.
+
+\newpage
+
+## Figure 7 - Length vs Time: Small-Gape, Deep-Bodied Taxa 
+
+```{r Figure 7, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+T_Length_sgap_vs_time
+```
+
+Figure 7. Species-specific average length (mm) of small-gape, deep-bodied fish plotted against the day of the year in 2017, 2018, and 2020. 
+
+\newpage
+
+## Figure 8 - Length vs Time: Large-Gape, Deep-Bodied Pan Fish 
+
+```{r Figure 8, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+T_Length_lgap_vs_time
+```
+
+Figure 8. Species-specific average length (mm) of large-gape, deep-bodied fish plotted against the day of the year in 2017, 2018, and 2020. 
+
+\newpage
+
+## Figure 9 - Length vs Time: Poeciliidae 
+
+```{r Figure 9, echo=F, echo=F, message=F, warning=FALSE, fig.height=6, fig.width=6, fig.align = 'center'}
+T_Length_poec_vs_time
+```
+
+Figure 9. Species-specific average length (mm) of Poeciliidae plotted against the day of the year in 2017, 2018, and 2020. 
+
+\newpage
+
+
+## Figure 10 - Length vs Rainfall: Regression Community 
+
+```{r Figure 10, echo=F, echo=F, message=F, warning=FALSE, fig.height=4, fig.width=6, fig.align = 'center'}
+T_Length_com_vs_rainfall_annual
+```
+
+Figure 10.Average fish average length (mm) versus annual rainfall for 2017, 2018, and 2020.
+
+\newpage
+
+## Figure 11 - Length vs Rainfall: Regression Centrarchid 
+
+```{r Figure 11, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+T_Length_cent_vs_rainfall_annual
+```
+
+Figure 11. Species-specific average length of Centrarchidae (mm) versus annual rainfall for 2017, 2018, and 2020.
+
+\newpage
+
+## Figure 12 - Length vs Rainfall: Regression Poeciliid 
+
+```{r Figure 12, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+T_Length_poec_vs_rainfall_annual
+```
+
+Figure 12.Species-specific average length of Poeciliid (mm) versus annual rainfall for 2017, 2018, and 2020.

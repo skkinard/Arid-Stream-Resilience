@@ -1,0 +1,233 @@
+---
+title: "Explore Environmental Variables 2017-2018: Figures"
+author: "Sean Kinard"
+date: "2023-02-06"
+output: 
+  pdf_document: 
+    fig_caption: yes
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r R Setup, include = F, echo=F, message=F}
+# -----------------------------------------------------------------------------
+# Setup: Clear Global Environment & load tools for analytical scripts
+# -----------------------------------------------------------------------------
+
+# Clean Workspace
+rm(list=ls())
+
+# Load Packages
+
+# Data Tools
+library(tidyverse)
+library(lubridate)
+library(BiodiversityR)
+library(car)
+
+
+# Plot Tools
+library(paletteer)
+library(ggsignif)
+library(patchwork)
+library(knitr)
+library("ggpmisc")
+library(ggrepel)
+library(kableExtra)
+library(ggpubr)
+library(ggbiplot)
+
+site_order <- c("TR", "SF", "AR", "MR", "PD", "PL", "GC", "WM", "EM")
+
+my_colors <- c('#F5191CFF', '#E78200FF', '#E8A117FF',
+               '#EABB22FF', '#CBC988FF', '#9FC095FF',
+               '#6BB699FF', '#3DAAA6FF', '#3B99B1FF')
+
+# -----------------------------------------------------------------------------
+# End setup
+```
+
+```{r Analyses, include=F, echo=F, message=F}
+# -----------------------------------------------------------------------------
+# Load Scripts to Populate Global Environment with Figures and Tables
+# -----------------------------------------------------------------------------
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+
+source('R_Scripts/004_site_explore.R')
+source('R_Scripts/008_site_table.R')
+source('R_Scripts/010_site_PCA.R')
+
+# -----------------------------------------------------------------------------
+# End Analyses
+```
+
+\newpage
+
+## Figure 1 - Basin Size & Land Use
+```{r Figure 1, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+scatter_watershed
+```
+Figure 1. Basin size (km2) as well as landuse porportions of watersheds vs annual precipitation. Vertical scales vary by metric. 
+
+\newpage
+
+## Figure 2 - Long-Term Flow vs Rainfall
+```{r Figure 2, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+scatter_flow
+```
+Figure 2. Long-term flow metrics include flashiness (annual sum of day-day changes), high flow pulse percentage (% days above 3x annual mean flow), low flow pulse percent (daily discharge below 25th percentile), mean annual flow, medain annual flow, and seasonality (approximates the degree of environmental change though a year).
+
+\newpage
+
+## Figure 3 - Short-Term Flow vs Rainfall
+```{r Figure 3, echo=F, echo=F, message=F, warning=FALSE, fig.height=6, fig.width=6, fig.align = 'center'}
+boxplot_flow
+```
+Figure 3. Boxplots of short-term hydrologic variables from fish sampling dates 2017-2020. Vertical axes are logarithmic. Day-of discharge (q) as well as the maximum, minimum, and mean of 2-weeks prior discharge are reported in cubic feet per second (cfs).
+
+\newpage
+
+## Figure 4 - Short-Term Flow vs Time
+```{r Figure 4, echo=F, echo=F, message=F, warning=FALSE, fig.height=6, fig.width=6, fig.align = 'center'}
+timeline_flow
+```
+Figure 4. Short-term flow vs time (2017-2018 only). Vertical axes are log transformed. Variables include day-of discharge (q) as well as the maximum, minimum, and mean of 2-weeks prior discharge are reported in cubic feet per second (cfs).
+
+\newpage
+
+## Figure 5 - Algae vs Rainfall
+```{r Figure 5, echo=F, echo=F, message=F, warning=FALSE, fig.height=6, fig.width=6, fig.align = 'center'}
+boxplot_algae
+```
+Figure 5. Chlorophyll concentrations ($\mu$g/cm) for blue-green cyanobacteria, diatoms, and green algae.
+
+\newpage
+
+## Figure 6 - Algae vs Time
+```{r Figure 6, echo=F, echo=F, message=F, warning=FALSE, fig.height=6, fig.width=6, fig.align = 'center'}
+timeline_algae
+```
+Figure 6. Chlorophyll concentrations ($\mu$g/cm) for blue-green cyanobacteria, diatoms, and green algae versus time (2017-2018)
+
+\newpage
+
+## Figure 7 - Channel vs Rainfall
+```{r Figure 7, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+boxplot_channel
+```
+Figure 7. Boxplot of channel characteristics including canopy coverage (%), maximum depth (m), gravel substrate (%), silt substrate (%), and stream width (m). 
+
+\newpage
+
+## Figure 8 - Channel vs Time
+```{r Figure 8, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+timeline_channel
+```
+Figure 8. Timeline of channel characteristics from 2017-2018. Vertical axes vary by metric including: canopy coverage (%), maximum depth (m), gravel substrate (%), silt substrate (%), and stream width (m). 
+
+\newpage
+
+## Figure 9 - Water Chemistry vs Rainfall
+```{r Figure 9, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+boxplot_chemistry
+```
+Figure 9. Boxplot of water chemistry from 2017 thorugh 2018 at each site (colored by rainfall). Variables include Conductivity ($\mu$S/cm), dissolved oxygen (mg/L), ammonia (mg/L), nitrate (mg/L), and phosphorous (mg/L).
+
+\newpage
+
+## Figure 10 -  Water Chemistry vs Time
+```{r Figure 10, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+timeline_chemistry
+```
+Figure 10. Water chemistry vs time from 2017 thorugh 2018 at each site (colored by rainfall). Variables include Conductivity ($\mu$S/cm), dissolved oxygen (mg/L), ammonia (mg/L), nitrate (mg/L), and phosphorous (mg/L).
+
+\newpage
+
+## Figure 11 -  Long Term Environmental PCA
+```{r Figure 11, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+PCA_lte
+```
+Figure 11. Principal Component Analysis of long-term environmental variables for sampling locations. Variables were scaled to have unit variance before the analysis. landuse categorizations are denoted by 'L.' and were estimated using satellite imagery in 2006. Other variables represent 20 year averages. Average annual rainfall is labeled 'Rainfall'. Flow metrics (denoted with 'F.')  include annual average, annual median, base flow index (avg of lowest 7 day stretch / average daily flow), low pulse percentage (% days below 25 percentile of discharge), high flow pulse percentages (% above 3x and 7x average flow), low flow freqency (# times where daily discharge drops below the 5th percentile) and flashiness (the cumulative changes in day to day discharge divided by cumulative annual discharge).
+
+\newpage
+
+## Figure 12 - Short Term Environmental PCA: 2017-2020
+```{r Figure 12, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+PCA_ste_all
+```
+Figure 12. Principal Component Analysis of environmental variables measured during sample events in 2017, 2018, and 2020. Variables were scaled to have unit variance before the analysis. Flow is average annual discharge, HFPP is the proportion of the annual discharge that is 3x higher than the Flow, LFPP is the proportion of discharge below the 25th percentile, Flashiness is the cumulative changes in day to day discharge divided by cumulative annual discharge.  Horizontally, sites roughly order according to precipitation regime. Sites with drier climate like Tranquitas and Perdido have higher silt, conductivity, and green algae. Wetter sites like West Mustang, Garcitas, and Mission River have elevated channel depth and channel widths as well as greater discharge and ammonia conncentrations. San Fernando and Aransas are distinguished along the vertical axis with elevated nitrates, phophates, canopy density, gravel, and blue-green cyano bacteria. East Mustang and Placedo appear to share characteristics with many or the other streams.
+
+\newpage
+
+## Figure 13 -   Short Term Environmental PCA: 2017
+```{r Figure 13, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+PCA_ste_2017
+```
+Figure 13. Principal Component Analysis of environmental variables measured during sample events in 2017.
+
+\newpage
+
+## Figure 14 -  Short Term Environmental PCA: 2018
+```{r Figure 14, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+PCA_ste_2018
+```
+Figure 14. Principal Component Analysis of environmental variables measured during sample events in 2018.
+
+\newpage
+
+## Figure 15 -  Short Term Environmental PCA: 2020
+```{r Figure 15, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+PCA_ste_2020
+```
+Figure 15. Principal Component Analysis of environmental variables measured during sample events in 20120.
+
+## Figure 16 -  Site Map
+![](/home/kinard/Documents/Research/Dissertation/02_Resilience/Figures/site_map.pdf)
+
+Figure 16. Study sites (in green) where fish, invertebrates, and environmental data were collected monthly following hurricane Harvey (August 2017) for 12 months. An overlay indicates the average annual precipitation (brown-purple) from USGS PRISM data (1981-2010). Cities (black squares) and urban areas (grey) were included for geographic reference. This map was made with Natural Earth
+
+\newpage
+
+```{r Table 1, echo=F, echo=F, message=F, warning=FALSE, fig.align = 'center'}
+knitr::kable(table_LTE,
+             align=c('l','c','c','c','c','c','c','c','c','c','c'),
+             format = "latex", 
+             booktabs = TRUE,
+             caption = "Long-term environmental variables for sampling locations. Values represent 20 year averages. Flow is average annual discharge, HFPP is the
+proportion of the annual discharge that is 3x higher than the Flow, LFPP is the proportion of discharge below the 25th percentile, Flashiness is the
+cumulative changes in day to day discharge divided by cumulative annual discharge, Season approximates the degree to which the flow varies during
+the course of a single year." )  %>%
+          kable_styling(latex_options = "scale_down") %>%
+  kableExtra::landscape()
+```
+
+\newpage
+
+```{r Table 2, echo=F, echo=F, message=F, warning=FALSE, fig.align = 'center'}
+knitr::kable(table_devar_site,
+      format = "latex", 
+      booktabs = TRUE,
+      caption = "Sample-event environmental summary statistics include the annual average and standard deviation." )  %>%
+          kable_styling(latex_options = "scale_down") %>%
+  kableExtra::landscape()
+```
+
+\newpage
+
+```{r Table 3, echo=F, echo=F, message=F, warning=FALSE, fig.align = 'center'}
+knitr::kable(table_devar_qtrly,
+      format = "latex", 
+      booktabs = TRUE,
+      caption = "Sample-event environmental summary statistics include the 3-month average and standard deviation for each quarter of the year." )  %>%
+          kable_styling(latex_options = "scale_down") %>%
+  kableExtra::landscape()
+```
+
+
+
+
+
+
+
+

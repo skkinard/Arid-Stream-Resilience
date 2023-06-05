@@ -1,0 +1,234 @@
+---
+title: "Fish Counts and Lengths"
+author: "Sean Kinard"
+date: "2023-03-03"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+---
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_dark(base_color = "cornsilk1")
+```
+
+
+```{r setup, include=FALSE}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+
+library(tidyverse) # all tidyverse packages
+library(lubridate) # date managment
+library(vegan)
+library(ggdark)
+library(vegan)
+library(BiodiversityR)
+library(car)
+library(paletteer)
+library(ggsignif)
+library(patchwork)
+library(knitr)
+library("ggpmisc")
+library(ggrepel)
+library(kableExtra)
+library(ggpubr)
+library(ggbiplot)
+
+# load data
+source('R_Scripts/000_d_dataframes.R')
+source('R_Scripts/000_biological_scales_comparison.R')
+source('R_Scripts/065_response_v2.R')
+```
+
+# Taxonomic Families
+- Poeciliidae
+    - G. affinis, P. latipinna
+
+- Centrarchidae
+    - L. auritus, L. cyanellus, L. gulosus, L. humilis, L. macrochirus, L. megalotis, L. microlophus, L. miniatus
+    - M. salmoides, P. annularis, P. nigromaculatus
+
+- Ictaluridae
+    - A. melas, A. natalis, I. punctatus, N. gyrinus, P. olivaris
+
+- Lepisosteidae
+    - L. oculatus 
+
+- Leuciscidae
+    - C. lutrensis, C. venusta, N. texanus, P. vigilax
+
+- Cichlidae
+    - H. cyanoguttatum, O. aureus
+
+- Cyprinidontidae
+    - C. variegatus
+    
+---
+# Plot Description
+- For a group of comparison:
+    - Count(red) and Size (Yellow) are plotted against time
+    - Time is blocked by year
+    - Count and Length variables are scaled within group of comparison and within sampling location
+    - localized smoother improves visualization of trends through time
+    
+- Stable Count (red) and elevated size (yellow) implicates growth
+- high Count (red) and depreciated size (yellow implicates breeding events
+- parallel upward trends implicate immigration of larger fish
+- parallel downward trends implicate loss or emigration of larger fish
+
+---
+# Poeciliidae
+- Includes : G. affinis, P. latipinna
+- Post-hurricane peak in 2017
+- Seasonal peak in 2nd Quarter of 2020
+- 
+
+---
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('family', 'Poeciliidae')
+```
+Seasonal peak in the 2nd Quarter of 2020
+
+---
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('family', 'Centrarchidae')
+```
+
+---
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('family', 'Ictaluridae')
+```
+
+---
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('family', 'Lepisosteidae')
+```
+
+---
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('family', 'Leuciscidae')
+```
+
+---
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('family', 'Cichlidae')
+```
+
+---
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('family', 'Cyprinodontidae')
+```
+
+---
+# Taxonomic Species
+
+- L. macrochirus (Bluegill Sunfish)
+- L. gulosus (Warmouth Sunfish)
+- L. cyanellus (Green Sunfish)
+- H. cyanoguttatum (Rio Grande Cichlid)
+- G. affinis (Western Mosquitofish)
+- P. latipinna (Sailfin Molly)
+- C. variegatus (Sheepshead Minnow)
+- P. vigilax (Bullnose Minnow)
+
+---
+
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'L. macrochirus')
+```
+
+---
+
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'L. megalotis')
+```
+
+---
+
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'L. gulosus')
+```
+
+---
+
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'L. cyanellus')
+```
+
+---
+
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'H. cyanoguttatum')
+```
+
+---
+
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'P. latipinna')
+```
+
+---
+
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'G. affinis')
+```
+
+---
+
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+ group_scale_plot('lowest_taxon', 'C. variegatus')
+```
+
+---
+
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'P. vigilax')
+```
+
+---
+
+# Trophic Category
+
+- Herbivore
+    - B. patronus, C. variegatus, D. cepedianum, O. aureus, P. latipinna
+- Omnivore
+    - everything else
+- Piscivore
+    - A. melas, A. mitchilli, A. rostrata, G. dormitor, I. punctatus,
+    L. cyanellus, L. megalotis, L. microlophus, L. oculatus, M. salmoides, P. annularis, P. nigromaculatus, P. olivaris
+
+---
+
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('trophic_category', 'Herbivore')
+```
+
+---
+
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('trophic_category', 'Omnivore')
+```
+
+---
+
+```{r , echo=F, echo=F, message=F, warning=F, fig.dim=c(18,14)}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('trophic_category', 'Piscivore')
+```
+

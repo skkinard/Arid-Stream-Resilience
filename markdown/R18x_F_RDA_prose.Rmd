@@ -1,0 +1,78 @@
+---
+title: "Explore Fish Composition 2017-2018: Prose"
+author: "Sean Kinard"
+date: "2023-02-14"
+output: 
+  pdf_document: 
+    fig_caption: yes
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+## Figure 1 - RDA: Environment (2017, 2018, 2020) [Count-Based]
+Redundancy analysis constrained to environmental variables explains 33% and 5% of the the variation among sites along the horizontal and vertical axes respectively. Annual rainfall is the strongest predictor, parallels the horizontal axis, parallels high flow pulse percentage and opposes low flow pulse percentage. Thus from left to right, humid sites are separated from drier sites. The vertical axis relates to hydrologic flashiness.
+
+In comparison to biomass-based RDA, density-based RDA axes explain more variation. This is likely driven by the exageration of community differences by numerous poeciliids at the drier sites (see figure 2)
+
+*I'll need to revisit the environmental variables. I need to include some variable or ratio of variables to relate storm magnitude. Also, try leaving out annual precipitation as a contraining variable, but color sites to see if it still emerges as a relevant predictor.*
+
+## Figure 2 - RDA: Species (2017, 2018, 2020) [Count-Based]
+Longear (*L.megalotis*) ordinates at the humid extreme and sailfin (*P.latipinna*) and sheepshead (*C.variegatus*) ordinates at the arid extreme. Blackstripe (*F.notatus*) distinguishes PD. Largemouth (*M.salmoides*) and Bluegill (*L.macrochirus*) appear at PD, MR and humid sites.
+
+Ellipses at the extremes are characterized by small ellipses at the extremes of the horizontal axis. Dry sites (TR, SF, and AR) overlap, and wet sites overlap (EM, WM, GC, PL). PD is distinguished from the wetter compositions along the vertical axis. MR overlaps PD and the wetter sites.
+
+## Figure 3 - RDA: Species-Zoomed (2017, 2018, 2020) [Count-Based]
+Species found at many of the sample sites or with few instances of capture ordinate closer to the center.
+
+Arid-leaning taxa include tilapia (*O.aureus*), tetra (*A.mexicanus*), and killifish (*F.grandis*).
+
+Humid-leaning taxa include gar (*L.oculatus*), shiners (*C.venusta* and *N.texanus*), darter (*E.gracile*), and channel catfish (*A.natalis*).
+
+Perdido and Misson leaning taxa include golden topminnow (*F.chrysotus*), catfish (*A.melas*), and largemouth bass (*M.salmoides*).
+
+Weakly associated taxa include bullhead (*P.vigilax*) and redear (*L.microlophus*). Bullhead is found at several sites throughout the region in low numbers and probably only during certain times of the year. Redear is found exclusively at more humid sites, but also in low numbers and maybe seasonally.
+
+## Figure 4 - RDA: 0-6 months after Hurricane Harvey [Count-Based]
+Sites at the extemes of the rainfall gradient (EM, WM, TR, SF) maintain low variation in composition over time. However, several sites in the middle of the gradient (GC, AR, PD, MR) vary in composition over time.
+
+Immediately after the hurricane, AR resemebled the average PD community. GC and MR (and SF to a lesser extent) reset towards the middle of the ordination (only region-wide taxa). After several months MR adjusted to resemble arid communities and AR adjusted to resemble humid communities.
+
+## Figure 5 - RDA: 7-12 months after Hurricane Harvey [Count-Based]
+6 months after the hurricane, communities tend to change little through time. PD is much more stable compared to first six months where month 5 resembled humid communities temporarily. AR still varies widely between resembling humid communities or PD-like community. MR, PL, and WM have isolated sampling events which verge towards the center (similarity or common taxa) in months 6,7, and 11.
+
+## Figure 6 - RDA: 2020 [Count-Based]
+In 2020, middle sites (MR, PD, and PL) emerge separate from the extremes of the gradient.
+
+## Figure 7 - RDA: Environment (2017, 2018, 2020) [Biomass-Based]
+Redundancy analysis constrained to environmental variables explains 17.9% and 5% of the the variation among sites along the horizontal and vertical axes respectively. Annual rainfall is the strongest predictor, parallels the horizontal axis, parallels high flow pulse percentage and opposes low flow pulse percentage. Thus from left to right, humid sites are separated from drier sites. The vertical axis relates to hydrologic flashiness.
+
+Ellipses with annual rainfall greater than 80mm per year have small ellipses. Dry sites (TR, SF, and AR) overlap much less using biomass compared to densities. PD and AR ellipses overlap entirely. MR is located between arid and wetter sites. 
+
+In comparison to biomass-based RDA, density-based RDA axes explain more variation. This is likely driven by the exageration of community differences by numerous poeciliids at the drier sites (see figure 1)
+
+*I think the model is struggling to reconcile interannual variaion between the 2017-2018 dataset vs the 2020 dataset. There are some pretty significant changes in composition and diversity at the transition sites (PL, MR, and PD) in 2020 that may be throwing things off.*
+
+## Figure 8 - RDA: Species (2017, 2018, 2020) [Biomass-Based]
+Longear (*L.megalotis*) ordinates at the humid extreme and sailfin (*P.latipinna*) and sheepshead (*C.variegatus*) ordinates at the arid extreme. redbreast (*L.auritus*) distinguishes PD and AR
+
+*I suspect large catches of gar in 2020 are influencing the species' position.*
+
+*Although blackstripe topminnow and redbreast serve as distinguishing taxa for PD, Redbreast have more mass, whereas blackstripe have more individuals.*
+
+
+## Figure 9 - RDA: Species-Zoomed (2017, 2018, 2020) [Biomass-Based]
+While most species ordinate similarly in the biomass-based RDA, there are some new developments. Mosquitofish (*G.affinis*) and mullet (*M.cephalus*) ordinate within the MR ellipse, in between arid and humid sites. Piscivorous taxa ordinate leaning towards the humid sites.
+
+## Figure 10 - RDA: 0-6 months after Hurricane Harvey [Biomass-Based]
+Communities at the extremes of the rainfall gradient change the least through time. Other sites (AR, PD, GC, SF, and MR) verge towards the center in month one and separate back to their respective centroids through time. For example, SF begins near 0,0 in month 1, but largely resembles arid sites along the horizontal axis in months 2 and 5. Also, GC resemebled AR and PD centroid community states in month 1, but quickly returned to the humid community type after 2 months.
+
+*I want to calculated a centoid distance, or distance to center for each community-date. I've also considered some type of nearest neighbor for each time period to reflect sites within the region becoming more similar or resetting after the hurricane. I'm also intrigued by PD verging into the humid community type in month 5 before returning to its unique state.*
+
+## Figure 11 - RDA: 7-12 months after Hurricane Harvey [Biomass-Based]
+AR and PD seem to have a relatively unstable compositional profile, bouncing between it's unique state to that of humid or drier SF sites in a circular or cyclical way.
+
+There is likely another region-wide disturbance (June flood 2018) which explains the convergence of MR, AR, WM, PL in months 6-7. *I should ask Dr. Patrick to share the script to calculate flood metrics and apply it for that time period*
+
+## Figure 12 - RDA: 2020 [Biomass-Based]
+Variation in TR composition is uncharacteristically high, but only in the vertical axis. SF varies widely, resembling AR and PD in the 2nd quarter of the year.

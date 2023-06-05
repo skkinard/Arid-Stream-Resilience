@@ -1,0 +1,82 @@
+---
+title: "Fish Biomass 2017-2018: Prose"
+author: "Sean Kinard"
+date: "2023-02-06"
+output: 
+  pdf_document: 
+    fig_caption: yes
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+\newpage
+
+## Figure 1 - Biomass vs Rainfall: Boxplot
+In 2017, TR and MR fish biomass were well below the region-wide average. Otherwise, fish biomass slightly elevated at the ends of the gradient and slightly lower at the transition sites in the middle of the gradient.
+
+In 2018, biomass appears lows at some of the humid sites (WM, GC, and PL), and exceptionally high at EM, PD, and AR.
+
+2020, biomass appears slightly higher on average than in 2018 which could be caused by different fish measuring methods (despite correctional transformations). Otherwise, biomass remains stable across the region except for  WM (and somewhat TR) which were relatively low. 
+
+## Figure 2 - Biomass vs Diatom Concentration
+No apparent relation between biomass and diatom concentrations. Which contrasts with density-based results. So the density relationship may be driven by numerous small fish.
+
+## Figure 3 - Biomass vs 2-Week Maximum Discharge
+In 2017, and 2018, biomass appears negatively related to maximum discharges in the 2 weeks prior to sampling.
+
+However in 2020, the pattern is reversed such that biomass was greater when antecedent flows were high.
+
+## Figure 4 - Biomass vs Nitrate Concentrations
+Biomass appears positively related to nitrate concentrations in all sampling periods.
+
+## Figure 5 - Biomass vs Time: Community 
+In 2017, there is a recovery or seasonal bump in the 4th qtr of the year following hurricane Harvey.
+
+In 2018, biomass increased throughout the year at AR and PD (and EM somewhat). In contrast, biomass declined throughout the first three quarters at most other sites (TR, SF, MR, PL, and WM).
+
+In 2020, biomass peaks at dry sites West of MR during the 2nd quarter of the year. In contrast, biomass peaks later in the year at wetter sites (West of MR). Biomass remains relatively low at WM throughout the year.
+
+## Figure 6 - Biomass vs Time: Families 
+Centrarchid biomass peaks 2 months after hurricane Harvey most notably at AR, PL, and EM. Moving into 2018, biomass steadly declined at PL, but precipitously declined at AR and EM with isolated spikes in biomass. Uniquely, centrarchid biomass was abnormally high at Perdido in the 3rd quarter of 2018 and 2020. In 2020, centrarchid biomass peaked in the 2nd quarter at SF, AR, and PL.
+
+Leuciscid biomass is stable and minute at most sites except for AR and PD which experience peaks in the 2nd quarter of the year in all sampling periods as well as a small bump after the hurricane in 2017.
+
+Poeciliid biomass at SF peaks in January in 2018 and 2020 and was moderate in the 4th quarter of 2017 and 2018. At TR, poeciliid biomass spiked in the first month following hurricane harvey, plumetted and later peaked in the middle of 2018.
+
+## Figure 7 - Biomass vs Time: Small-Gape, Deep-Bodied Taxa 
+Rio grande cichlid (*H.cyanoguttatum*) biomass oscillates annually with minimums occuring in January and maximums in June. There was a quick bump and fall of cichlids at SF following hurricane Harvey.
+
+Red-breast sunfish (*L.auritus*) are most abundant at PD, and appear to oscillate annually with a minimum biomass in the 1st quarter and a maximum in the 3rd quarter.
+
+Bluegill sunfish (*L.macrochirus*) biomass bumped in the 2nd month after hurricane Harvey in 2017. Otherwise, bluegill biomass remains stable throughout the year at the wetter sites, but appears to have a seasonal peak in the 2nd quarter at the drier sites.
+
+Longear sunfish (*L.megalotis*) biomass appears to peak in months 2-3 following hurricane Harvey, and remained elevated until the second quarter of 2018 where a precipitous minimum was reached across the region (implicating the June flood). Longear biomass recovered in the 3rd quarter of 2018 and remained stable across the region in 2020. Longear appear most abundant at PL and WM.
+
+## Figure 8 - Biomass vs Time: Large-Gape, Deep-Bodied Fish 
+Green sunfish (*L.cyanellus*) biomass was largely absent from drier sites in 2017 and 2018. However in 2020, green sunfish were present at all sites East of San Fernando, and their biomass peaked in the 2nd quarter and was low in the 1st and 4th quarters.
+
+It's difficult to tell anything about warmouth sunfish (*L.gulosus*) and Large-mouth Bass (*M. salmoides*) because their abundances were so low. 
+
+## Figure 9 - Biomass vs Time: Poeciliidae 
+Western mosquitofish (*G. affinis*) biomass remains constant across sampling periods and sites.
+
+Sailfin molly (*P. latipinna*) biomass was extaordinarily high at TR in the first month after hurricane Harvey. After an immediate fall in the 2nd month, sailfin molly biomass peaks in the late 2nd quarter of the year. At San Fernando, a brief bump occured in biomass in the 2nd month after hurricane Harvey. However, it looks like San Fernando experiences a seasonal peak in sailfin molly biomass in January which declines to a minimum in mid summer.
+
+## Figure 10 - Biomass vs Rainfall: Regression Community 
+Total fish biomass per unit area remain similar across the region in each sampling period.
+
+## Figure 11 - Biomass vs Rainfall: Regression Centrarchid 
+Redbreast sunfish (*L.auritus*) (and green sunfish, *L.cyanellus* to a lesser extent) peak in the middle of the rainfall gradient in all sampling periods.
+
+Warmouth sunfish (*L.gulosus*) biomass remains contant throughout the region across sampling periods.
+
+Bluegill sunfish (*L.macrochirus*) biomass has a weak negative relationship with rainfall, most evident in 2020.
+
+Longear sunfish (*L.megalotis*) biomass is positively related with rainfall, especially since they are absent from the driest sites in 2018 and 2020.
+
+## Figure 12 - Biomass vs Rainfall: Regression Poeciliid 
+Western mosquitofish (*G.affinis*) biomass had a weak positive relationship with rainfall in 2017, but their biomass remained stable across the region in other years.
+
+Sailfin molly (*P.latipinna*) biomass was negatively related to rainfall in all sampling periods.
+

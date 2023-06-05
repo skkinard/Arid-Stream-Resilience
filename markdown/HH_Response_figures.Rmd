@@ -1,0 +1,29 @@
+---
+title: "Fish Response to Hurricane"
+author: "Sean Kinard"
+date: "2023-03-24"
+output: 
+  pdf_document: 
+    fig_caption: yes
+    fig_width: 7
+    fig_height: 7
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+
+```{r R Setup, include = F, echo=F, message=F}
+
+setwd('/Users/sean/Documents/Research/Dissertation/02_Resilience')
+
+source('R_Scripts/067_LRR_calc_v2.R')
+#------------------------------------------------------------------------------
+# End setup
+```
+
+\newpage
+
+```{r , include=F, echo=F, message=F, warning=F, fig.align = 'center'}
+RvB_com_B100
+```

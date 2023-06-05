@@ -1,0 +1,103 @@
+---
+title: "Explore Environmental Vairables 2017-2018: Prose"
+author: "Sean Kinard"
+date: "2023-02-06"
+output: 
+  pdf_document: 
+    fig_caption: yes
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+\newpage
+
+## Basin Size vs Rainfall (1)
+Basin size tends to be larger at drier sites, but TRC is an exception. 
+
+Commentary: I should note that I found erroneous measures of basin size in the 'RAPID_FINAL_DATA/Site_Data.csv' And resourced values from the USGS gages ii and current USGS meta data for these values. I have not edited the original file, but have included a table and script I used to identify and solve the problem in the folder on the TERRG drive. The megaframe combining fish and environmental data from 2017-2020 includes the updated basin size.
+
+## Land Use vs Rainfall (1)
+Landscape appears to change along the rainfall gradient with slightly higher (<10% difference) development at drier sites, more forest (~20% higher) at transition sites, and greater cropland (~40% higher) at the sub-humid sites. Otherland includes shrubland and grassland which account for ~60% of the land cover at dry sites and declines with more rainfall.
+
+Commentary: cropland appears to increase with rainfall. However, 'cropland' is actually agricultural land which includes ranching and crops. That's not so bad, but add to that the missing variable that is hiding in the 'otherland' variable, shrubland. In my experience, most land in Texas is not 'natural' because landowners need agricultural tax breaks from the back-breaking property taxes in the state. So the *'shrubland' accounting for over 60% of the land area in the drier watersheds is likely utilized for ranching (i.e agriculture).* 
+
+I looked deeper at the gagesii lc06_basin variables; otherland is composed of grassland which accounts for less than 5% of most sites, and the shrubland wich accounts for most of the missing land% at the drier sites. *If you add the otherland to cropland, the pattern washes out.* The urban effect at the dry side is less than 10% land-use difference, so I also don't put very much stock in it. I would caution using landscape predictors since drawing inferences is confounded by the nature of satellite-based categorization of 30m plots of land. Development and forest are less prone to erroneous categorization, but the proportional differences across the study region might be negligible.
+
+I looked at the riparian land-use way back in 2018 and didn't find anything interesting there either. However, there are some obvious localized phenomena that reveal themselves at our study sites. East Mustang and Perdido are unique in that they do not have a forested riparian zone. This results in low densiometer readings and unique algal patterns
+
+## Long-term Flow vs Rainfall (2)
+With the exception of MR (a consistent, high flow stream), hydrologic flashiness peaks in the middle of the rainfall gradient. High and low flow pulse percentages mirror meet expectations, but two most extreme dry sites are distingished from all other sites by LFPP. So LFPP will correlate well with patterns involving those 2 sites vs the rest of the sites. With the exception of MR, mean and median flows increase with precipitation. Seasonality exhibits signs of a threshold, stepping up at sites wetter than MR.
+
+## Short-Term Flow vs Rainfall (3)
+Variation in flow metrics is higher at the more humid sites. Perdido (PD) is uniquely consistent and low in flow.
+
+## Short-Term Flow vs Time (4)
+Perdido dries up after May 2018. Flooding occured at 5 sites in July 2018. While most streams maintain pretty steady flows thorughout the year, SF and PL flows increased after May 2018 which countered the dominant pattern of waning flows in other streams during the dry part of the summer.
+
+## Algae vs Rainfall (5)
+Description: Bluegreen cyanobacteria is exceptionally high at Aransas River and is slightly elevated at Tranquitas and Perdido Creeks. Diatoms are generally higher at the dry sites except for TR and PD; the two lowest flow sites had fewest diatoms. Green algae concentrations peak in the middle of the rainfall gradient .
+
+## Algae vs Time (6)
+Bluegreen cyanobacteria exhbit recovery from October 2017 through December 2017 at two dry sites (TR and SF) and one humid site (GC). bluegreen cyanobacteria dipped at the two dry sites after Februrary, but steadily increased at 2 humid sites after May 2018. Concentrations remained high throughout the year at Aransas River.
+
+Diatoms exhibit recovery or seasonal peaks in February at all sites except the two most humid (WM and EM). Diatoms peaks decline steadily through the remainder of 2018. However, diatom concentrations rise after April at the two most humid sites.
+
+Two patterns describe green algae. Sites in the middle of the rainfall gradient start low and peak in December-January. At the wettest and driest sites,  green algae peaks at the end of summer and declines through the spring. East Mustang is the most obvious example, but SF and TR follow this pattern to a lesser degree. Suspected drivers for these patterns include: season, storm recovery, canopy coverage.
+
+## Channel vs Rainfall (7)
+Canopy density dips at sites in the middle of the rainfall gradient and at the most humid site (EM). Exceptionally low canopy coverage is observed at Perdido and East Mustang creeks. 
+
+Maximum depths are low at some sites (TR, SF, PL, and GC) and higher at others (AR, PD, WM, and EM) which may reflect reaches with significant pools vs those without.
+
+Some sites have gravel (SF, AR, PL) from road or railroad crossings within reaches, but it was only captured at some sampling events (see outliers beyond 75 percentile).
+
+The driest site substrates contain higher silt concentrations than the other sites.
+
+The three most humid sites have higher stream widths than the other streams (except for MR).
+
+## Channel Characteristics vs Time (8)
+Canopy density at dry sites started out higher than humid streams after hurricane Harvey. While most streams increased canopy to peak in April, TR and MR declined and reached a trough in January. In the summer, PL declined quickely (perhaps due to tree-removal efforts) while AR, MR, and GC declined during the hot and dry-phase of the summer. sites at he ends of the rainfall gradient (SF and TR as well as WM)  steadily increased coverage throughout the summer unlike other streams with riparian trees.
+
+Depth data is highly variable across sites and there are not any obvious patterns through time.
+
+Gravel substrates increase during 2018 at San Fernando, Aransas, and Mission River.
+
+Silt remained low at AR, MR, WMC. At EM, TR, and SF, silt increased from the hurricane through March 2018. Silt steadily increased at PD and PL until June. Silt drastically fell at SF after March 2018.
+
+Stream widths declines slightly throughout the period at all sites. There was a seasonal widening in stream channel at WMC from March-May.
+
+## Chemistry vs Rainfall (9)
+Conductivity is extremely high at TR, and elevated at MR and PL.
+
+Dissolved oxygen is extremely low at TR, and slightly lower at SF and GC.
+
+Ammonia concentrations are low at most sites, slightly higher at TR.
+
+Nitrate concentrations are extremely high at SF and AR, and slightly elevated at PL.
+
+Phosphate concentrations are also extremely high at SF and AR.
+
+## Chemistry vs Time (10)
+Conductivity remains high at TR. At sites MR, PL, and AR, conductivity reached a trough in February and remained elevated (~1800$\mu$S/cm) through October 2018. Conductivity remained low at the other sites.
+
+Changes in dissolved oxygen occur in parallel, reaching maximums in coolers months and reaching troughs in the warmest months.
+
+TRC remains elevated compared to the other sites, and there is an anomalous ammonia reading at EMC in June.
+
+Nitrate concentrations at SF started extremely high and declined thorughout the year. Slightly different, Aransas nitrates peaked in January 2018 and reached a trough in July. PL reached a relatively high peak (compared to the remaining sites) in January before resuming low levels in June.
+
+Phosphate levels were extremely high after the hurricane at San Fernando, but quickly declined. Some sites peak in phosphates during April. Aransas remained high in phosphates throughout the year. 
+
+## Long-term Environmental PCA
+Sites ordinate horizontally in accordance with annual rainfall. Drier sites (TR, SF, and AR) clustered around variables including other-land, developed-land, base flow index, low flow pulse percentage, and frequency of low flow spells. Basin size ended between MR and San Fernando (the sites with the 2 largest basins). Flow stability is implicated at West Mustang which ordinated opposite of Flow variation, and in-line with average flow. Perdido is distinguished by hydrologic flashiness, forested watershed, and seasonality. The remaining streams, Garcitas, East Mustang, and Placedo clustured opposite of the dry--site cluster with variables rainfall and high flow pulse percentages (3x, and 7x).
+
+## Short-term Environmental PCA
+
+2017-2020: Tranquitas has more overlap with tidal rivers Placedo and Mission, distinguished by silt %, conductivity, and ammonia concentrations. Sites MR and Eastward tend towards greater widths, depths, filamentous green algae and elevated minimum discharges. Sites with gravel riffles (AR and PL) were distinguished by diatoms and blue-green cyanobacteria. San Fernando and Aransas share elevated nitrate and phosphate concentrations.
+
+2017: In the few months following hurricane harvey, sites West of Mission encountered wider variation than wetter sites.
+
+2018: GC, PL, MR, PD and TR overlapp throughout 2018.The Mustang sites as well as SF and AR contrasted most and had the widest variation in this environmental PCA.
+
+2020: During quarterly sampling in 2020, overlap decreased compared to 2018, and the order of sites changed such that MR and PD more closely resemble the environmental characteristics of the humid streams than GC and PL (going against rainfall-gradient expectations).

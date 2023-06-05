@@ -1,0 +1,256 @@
+---
+title: "Fish Counts and Lengths in 2017, 2018, and 2020"
+author: "Sean Kinard"
+date: "2023-03-03"
+output: 
+  pdf_document: 
+    toc: yes
+    fig_width: 7
+    fig_height: 8
+---
+
+
+
+```{r setup, include=FALSE}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+
+library(tidyverse) # all tidyverse packages
+library(lubridate) # date managment
+library(vegan)
+library(ggdark)
+library(vegan)
+library(BiodiversityR)
+library(car)
+library(paletteer)
+library(ggsignif)
+library(patchwork)
+library(knitr)
+library("ggpmisc")
+library(ggrepel)
+library(kableExtra)
+library(ggpubr)
+library(ggbiplot)
+
+# load data
+source('R_Scripts/000_d_dataframes.R')
+source('R_Scripts/000_biological_scales_comparison.R')
+source('R_Scripts/065_response_v2.R')
+```
+
+\newpage
+
+# Figure Description
+- For a group of comparison:
+    - Count(yellow) and Size (blue) are plotted against time
+    - Time is blocked by year
+    - Count and Length variables are scaled within group of comparison and within sampling location
+    - localized smoother improves visualization of trends through time
+    
+- Stable Count (yellow) and elevated size (blue) implicates growth
+- high Count (yellow) and depreciated size (blue implicates breeding events
+- parallel upward trends implicate gain of larger fish
+- parallel downward trends implicate loss of larger fish
+
+\newpage
+
+# Taxonomic Families
+- Poeciliidae
+    - G. affinis, P. latipinna
+
+- Centrarchidae
+    - L. auritus, L. cyanellus, L. gulosus, L. humilis, L. macrochirus, L. megalotis, L. microlophus, L. miniatus
+    - M. salmoides, P. annularis, P. nigromaculatus
+
+- Ictaluridae
+    - A. melas, A. natalis, I. punctatus, N. gyrinus, P. olivaris
+
+- Lepisosteidae
+    - L. oculatus 
+
+- Leuciscidae
+    - C. lutrensis, C. venusta, N. texanus, P. vigilax
+
+- Cichlidae
+    - H. cyanoguttatum, O. aureus
+
+\newpage
+
+## Figure 1 - Poeciliidae
+```{r Figure 1, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('family', 'Poeciliidae')
+```
+Figure 1. Recovery bump month 2 on dry side and month 3-4 on the wet side. 2nd Quarter size peak in 2020 is absent in 2018. Winter breeding, except PD.
+\newpage
+
+## Figure 2 - Centrarchidae
+```{r Figure 2, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('family', 'Centrarchidae')
+```
+Figure 2. following a recovery bump in month 2 after the hurricane, counts stabilized in 2018, implicating a failure to recruit. in contrast, 2020 contains seasonal swings in counts and sizes of centrarchids.
+\newpage
+
+## Figure 3 - Ictaluridae
+```{r Figure 3, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('family', 'Ictaluridae')
+```
+Figure 3. PD and Eastward, catfish appeared and disappeared quickly from streams (months 1-3). Catfish counts remain low in 2018 except for late in the year at AR and MR. GC also experienced isolated bursts of catfish counts. Catfish were largely absent in 2020 throughout the region.
+\newpage
+
+## Figure 4 - Lepisosteidae
+```{r Figure 4, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('family', 'Lepisosteidae')
+```
+Figure 4. After a region-wide recovery bump after the hurricane, gar became largely absent at drier sites and slow declined at wetter site through 2018. In 2020, there were high gar catches in the wetter seasons (qtr 2 and qtr 4).
+\newpage
+
+## Figure 5 - Leuciscidae
+```{r Figure 5, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('family', 'Leuciscidae')
+```
+Figure 5. Winter breeding and summer growth implicated by oscilations in counts and lengths. A post-hurricane bump and slow decline implicate a flood pulse in Leuciscidae compared to 2020 trends.
+\newpage
+
+## Figure 6 - Cichlidae
+```{r Figure 6, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('family', 'Cichlidae')
+```
+
+Figure 6. Winter recruitment, spring-summer growth. hurricane recovery are visually indistinguishable from 2020 seasonal trends
+\newpage
+
+# Taxonomic Species
+
+- L. macrochirus (Bluegill Sunfish)
+
+- L. gulosus (Warmouth Sunfish)
+
+- L. cyanellus (Green Sunfish)
+
+- H. cyanoguttatum (Rio Grande Cichlid)
+
+- G. affinis (Western Mosquitofish)
+
+- P. latipinna (Sailfin Molly)
+
+- C. variegatus (Sheepshead Minnow)
+
+- P. vigilax (Bullnose Minnow)
+
+\newpage
+
+## Figure 7 - L. macrochirus
+```{r Figure 7, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'L. macrochirus')
+```
+Figure 7. Counts increase in the 4th and 1st quarters of the year. Size suddenly drops in the middle of the year. Trends look dampened in wet sites (GC, WM, EM).
+\newpage
+
+## Figure 8 - L. megalotis
+```{r Figure 8, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'L. megalotis')
+```
+Figure 8. Largely absent in San Fernando watershed. Post-hurricane recovery bump in month 2 for most sites, but PD and PL were delayed to months 3 and 4. Counts decline and size increase steadly at EM (and many other sites somewhat) throughout 2018.
+
+\newpage
+
+## Figure 9 - L. gulosus
+```{r Figure 9, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'L. gulosus')
+```
+Figure 9. Post-hurricane recovery bump in month 2 MR and Eastward. 
+\newpage
+
+## Figure 10 - L. cyanellus
+```{r Figure 10, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'L. cyanellus')
+```
+Figure 10. Post-hurricane response bump in month 3 at PD and Eastward. 2020 Seasonal high counts in 2nd quarter PL and Westward. Seasonal high count at WM and EM in 1st quarter of 2020.
+\newpage
+
+## Figure 11 - H. cyanoguttatum
+```{r Figure 11, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'H. cyanoguttatum')
+```
+Figure 11. Highly variable, bigger fish tend to appear in quarters 1-2?
+
+\newpage
+
+## Figure 12 - P. latipinna
+
+```{r Figure 12, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'P. latipinna')
+```
+Figure 12. Variable peaks (hurricane-strength related?) in counts occurred in 2018 compared to synchronized recruitment in 2020. 2020 quarter 1 and 2 are characterized by growth while quarters 3 and 4 are characterized by recruitment.
+\newpage
+
+## Figure 13 - C. variegatus
+```{r Figure 13, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+ group_scale_plot('lowest_taxon', 'C. variegatus')
+```
+Figure 13. Extraordinary post-hurricane recovery bump, followed by steady decline in numbers and increase in size. Only TR retained sheephead population dynamics in 2020, similary but less in magnitude compared to 2017-2018.
+\newpage
+
+## Figure 14 - P. vigilax
+
+```{r Figure 14, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('lowest_taxon', 'P. vigilax')
+```
+Figure 14. Post-hurricane recovery bump, steady decline. More in 2018 than in 2020
+
+\newpage
+
+# Trophic Category
+
+- Herbivore
+    - B. patronus, C. variegatus, D. cepedianum, O. aureus, P. latipinna
+
+- Omnivore
+  -  A. mexicanus, A. monticola, A. natalis, A. sayanus, A. xenica,  C. carpio,  C. lutrensis , C. venusta, D. maculatus, D. petenense, E. gracile, F. chrysotus, F. grandis, F. notatus, G. affinis, H. cyanoguttatum I. bubalus, L. auritus, L. gulosus, L. humilis, L. macrochirus, L. miniatus,  L. parva,   M. beryllina, M. cephalus,  N. gyrinus, N. texanus, P. formosa, P. vigilax, T. maculatus 
+  
+- Piscivore
+    - A. melas, A. mitchilli, A. rostrata, G. dormitor, I. punctatus,
+    L. cyanellus, L. megalotis, L. microlophus, L. oculatus, M. salmoides, P. annularis, P. nigromaculatus, P. olivaris
+
+
+\newpage
+## Figure 15 - Herbivore
+```{r Figure 15, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('trophic_category', 'Herbivore')
+```
+Figure 15. Herbivore recruitment occurs in quarters 1 and 2 at drier sites (MR and westward). However, recruitment occurs in quarters 3 and 4 at the wetter sites (PD and eastward). At PL, counts remain the same, but there is a growth peak in the 2nd quarte of 2018. Herbivores were largely absent at the wettest sites (WM and EM) in 2020.
+
+## Figure 16 - Omnivore
+```{r Figure 16, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('trophic_category', 'Omnivore')
+```
+Figure 16. Most counts declined throughout 2018 following the post-hurricane recovery bump. However, in 2020, such declines are not seen and resemble seasonal patterns around a mean.
+\newpage
+
+## Figure 17 - Piscivore
+```{r Figure 17, echo=F, echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+group_scale_plot('trophic_category', 'Piscivore')
+```
+Figure 17. Predators were largely absent from the driest sites TR and SF in 2018 (except for one post-flood event at TR). However, in 2020, there was a seasonal peak in predators at both sites in qtr 2 of 2020. Predator counts remained stable or declining throughout 2018 which contrasts with incremental gains in counts of predators in 2020.
+
+\newpage
+
+---
+
+You must really like fish science if you've read this far. Congratulations on making it to the end!

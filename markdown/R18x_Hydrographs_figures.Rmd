@@ -1,0 +1,194 @@
+---
+title: "Explore Hydrographs and Storms 1990-2020"
+author: "Sean Kinard"
+date: "2023-02-24"
+output: 
+  pdf_document: 
+    fig_caption: yes
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r R Setup, include = F, echo=F, message=F}
+#------------------------------------------------------------------------------
+# Setup: Clear Global Environment & load tools for analytical scripts
+#------------------------------------------------------------------------------
+
+library(tidyverse) # all tidyverse packages
+library(lubridate) # date managment
+library(ggdark) # cool dark ggplot theme
+library(patchwork)
+
+site_order <- c("TR", "SF", "AR", "MR", "PD", "PL", "GC", "WM", "EM")
+
+my_colors <- c('#F5191CFF', '#E78200FF', '#E8A117FF',
+               '#EABB22FF', '#CBC988FF', '#9FC095FF',
+               '#6BB699FF', '#3DAAA6FF', '#3B99B1FF')
+
+#------------------------------------------------------------------------------
+# End setup
+```
+
+```{r Analyses, include=F, echo=F, message=F}
+#------------------------------------------------------------------------------
+# Load Scripts to Populate Global Environment with Figures and Tables
+#------------------------------------------------------------------------------
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+
+source('R_Scripts/000_daily_discharge_and_storm_stats_1990_2020.R')
+
+#------------------------------------------------------------------------------
+# End Analyses
+```
+
+\newpage
+
+## Figure 1 - Discharge time series from 1990 - 2020.
+
+```{r Figure 1, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+regional_discharge_time_series
+```
+
+Figure 1. Points represent daily regional discharge relative to base flows (daily average discharge divided by 20 year median, averaged across sites). The red line is a snoothed averaage highlighinting interannual variation. Notice a cluster of high flow discharge in late 2017, when Hurricane Harvey caused region-wide flooding.
+
+\newpage
+
+## Figure 2 - Discharge time series from 1990 - 2020 faceted by 5 year intervals
+
+```{r Figure 2, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+regional_discharge_time_series_facet
+```
+
+Figure 2. Points represent daily regional discharge relative to base flows (daily average discharge divided by 20 year median, averaged across sites). The red line is a snoothed averaage highlighinting interannual variation. Regional discharges exhibit periodic peaks and troughs each year.
+
+\newpage
+
+## Figure 3 - Discharge Histogram
+
+```{r Figure 3, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+flow_density
+```
+
+Figure 3. Discharge histogram (reported as density) from 1990-2020 at monitored streams, colored from arid to humid sites (red to blue). SF and AR have highly localized densities, indicating a narrow range of experienced flows. Base flows appear to increase with annual precipitation.
+
+\newpage
+
+## Figure 4 - Discharge Histogram Faceted by Site
+
+```{r Figure 4, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+flow_density_sites
+```
+
+Figure 4. Discharge histogram (reported as density) from 1990-2020 at monitored streams, colored from arid to humid sites (red to blue). SF and AR have highly localized densities, indicating a narrow range of experienced flows. Base flows appear to increase with annual precipitation.
+
+\newpage
+
+## Figure 5 - Base Flows Boxplot 1990-2020
+
+```{r Figure 5, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+base_flows
+```
+
+Figure 5. Boxplot of annual median flows. Base flows vary widely at PD, EM, and somewhat at MR. Here, we represent base flows as the annual median, which corresponded most closely to density peaks (compared to averages or mode estimates). Base flows across years stayed similar within the three driest sites (TR, SF, and AR). Base flows are low at TR, PD, and EM. The highest base flows occur at MR and WM.
+
+\newpage
+
+## Figure 6 - Seasons
+
+```{r Figure 6, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+seas_weekly / seas_monthly
+```
+
+Figure 6. Weekly (above) and Monthly (below) averages divided annual median flow. The lower plot shows points, representing monthly averages for each site from 1990-2020. Lines, formed by a localized smoothing average funciton, highlight seasonal trends in flow across the region. Specifically, Discharges are typically low in February, and August. Discharges are high in May and September. Climatically, seasons take the form of cool-dry (11-3), cool-wet (4-6), hot-dry (7-8), and hot-wet (9-10).
+
+\newpage
+
+## Figure 7 - Monthly Variation Across Years
+
+```{r Figure 7, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+annual_variation_in_month
+```
+
+Figure 7. Discharge relative to annual median across years, with each panel representing a differernt month. This figure can be inspected to see variation in flows across years within the same month.
+
+\newpage
+
+## Figure 8 - Flow Variability Metrics
+
+```{r Figure 8, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+q_variability
+```
+
+Figure 8. 
+mo_rsd = monthly relative standard deviation (coefficient of variation)
+mo_WCDC = Weighted Cumulative Daily Changes = cumulative (daily changes relative to annual median)^2
+ye_DS = Annual Drought Strength = abs(average(under_25th_percentile) - annual_median) / annual_median
+ye_FS = Annual Flood Strength = abs(average(over_75th_percentile) - annual_median) / annual_median
+ye_HFPP15 = Annual High Flow Pulse Percentage 15x = % of days over 15Xannual_median
+ye_HFPP3 = Annual High Flow Pulse Percentage 3x = % of days over 3x annual_median
+ye_HFPP7 = Annual High Flow Pulse Percentage 7x = % of days over 7x annual_median
+ye_LFPP = Annual Low Flow Pulse Percentage = % of days under 25th percentile
+
+
+\newpage
+
+## Figure 9 - Hurricane Harvey Inter-Annual Context
+
+```{r Figure 9, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+hu_context
+```
+
+Figure 9. Regional average discharge, relative to annual median. Vertical line highlights the day of the year in which Hurricane Harvey struck in 2017. The Hurricane hit in late August, the seasonal drought period. It is not uncommon for a spike in regional flow to occur in September.
+
+\newpage
+
+## Figure 10 - Hurricane Harvey Site Hydrographs
+
+```{r Figure 10, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+hu_sites
+```
+
+Figure 10. 2017 hydrographs for each site with a dotted line indicating when Hurricane Harvey made landfall on August 27th, 2017. All sites experienced extraordinary floods except for TR and SF (the driest sites).
+
+\newpage
+
+## Figure 11 - Hurricane Harvey Flood Duration
+
+```{r Figure 11, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+hu_duration
+```
+
+Figure 11. Zooming into the period of time immediately after Hurricane Harvey at each site, vertical lines indicate the day of maximum flooding, and the first day flows met annual median dischage (horizontal line).
+
+\newpage
+
+## Figure 12 - Regional Summer Flood Inter-Annual Context
+
+```{r Figure 12, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+rf_context
+```
+
+Figure 12. Regional average discharge, relative to annual median. Vertical line highlights the day of the year in which Regional Summer Flood struck in 2018 The Storm hit in late June, preceding hot-dry season. The flood appears one or two orders of magnitude less powerful than those from Hurricane Harvey in the preceding year.
+
+\newpage
+
+## Figure 13 - Regional Summer Flood Site Hydrographs
+
+```{r Figure 13, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+rf_sites
+```
+
+Figure 13. 2018 hydrographs for each site with a dotted line indicating when Regional Summer flood began. All sites experienced extraordinary floods except for the most humid site, EM.
+
+\newpage
+
+## Figure 14 - Regional Summer Flood Flood Duration
+
+```{r Figure 14, echo=F, echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+rf_duration
+```
+
+Figure 14. Zooming into the period of time immediately after Regional Summer Flood at each site, vertical lines indicate the day of maximum flooding, and the first day flows met annual median dischage (horizontal line).
+
+\newpage

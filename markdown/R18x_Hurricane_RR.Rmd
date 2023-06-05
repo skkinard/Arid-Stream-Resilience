@@ -1,0 +1,131 @@
+---
+title: "Hurricane Response Ratio: Fish"
+author: "Sean Kinard"
+date: "2023-04-03"
+output: 
+  pdf_document: 
+    fig_caption: yes
+    fig_width: 7
+    fig_height: 7
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+
+
+### Summary
+It's difficult to see region-wide or gradient effects on total fish population recovery patterns. Most sites reach baselines within 0-1 months after the hurricane and three (possibly five) sites experienced delayed population bumps from February-April. However, diversity was depreciated in 2017-2018 across the region and compositions differed significantly. Poeciliidae (livebearers) were more abundant and Centrarchidae (sunfish and bass) were less abundant in 2017-2018 compared to 2020. Ictaluridae (catfish) and Leuciscidae (shiners and bullhead minnows) were uniquely (meaning little or none were caught in 2020) abundant throughout the region in 2017-2018. So Although the total number of fish presented no obvious patterns of disturbance recovery, family and species level comparisons in addition to ordination reveal that compositions following the hurricane were different from those in 2020.
+
+### Plot description:
+Circles represent the response ratio (x-baseline / baseline) of abundance, diversity, or composition versus time following Hurricane Harvey (2017-2018). The baseline used is 2020 quarterly samples filled with annual means. Circles are colored to aid visualization of trending biomass above 2020 quarterly baseline (cyan), within baseline (grey) +- 1 standard deviation, or below baseline (red). Dark grey circles indicate instances where a particular species was caught at a site for which there was no basline of comparison in 2020 (i.e none were caught in 2020). A moving average regression is represented by the dotted line. Axes are standardized in most figures, but in some instances (where baselines were absent) axes are not standardized to aid vizualization of trends among the sites.
+
+\newpage
+
+## Community
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_com_d100
+```
+
+Figure 1. Three of six sites show a bump in fish densities in the first 6 months after the hurricane. East Mustang is the only site that didn't experience negative response ratio. Tranquitas experienced a delayed bump in March and April of 2018. West Mustang experienced a modest elevation in fish population untill April 2018. The other six sites show unremarkable response ratios within slightly below baseline ranges.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_com_rich
+```
+
+Figure 2. Six sites (West of the Garcitas) experienced lower species richness throughout 2017-2018 after the hurricane compared to baselines in 2020. Garcitas and the other wetter sites experienced mostly normal or elevated species richness in 2017-2018 compared to o2020 baselines.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_com_cdist
+```
+
+Figure 3. Composition varied from baseline most  noticeably at three sites in the middle of the rainfall gradient (Aransas, Mission, and Perdido). Since species richness remained relatively low in 2017-2018, compositional differences reflect species replacement rather than addition. However, compositions also varied somewhat at the two wettest sites (West Mustang and East Mustang), likely due to the addition of species, since species richness was relatively elevated in 2017-2018 at these sites. Centroid distances are the euclidean distance from a site's community on a certain date to the 2020 annual average (n=4) in the first 2 axes of an Redudancy Analysis (canonical ordination).
+
+\newpage
+
+## Family
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_leuc
+```
+
+Figure 4. Leuciscidae were more prevalent throughout the region in 2017-2018 comparied to 2020. Leuciscidae uniquely appeared at two sites (San Fernando and Mission) in 2017-2018 compared to 2020 baselines. Leuciscidae were also elevated for the most part throughout the region. Leuciscidae includes red shiner (*C.lutrensis*), weed shiner (*N.texanus*), bullhead minnow (*P.vigilax*), blacktail shiner (*C.venusta*). 
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_poec
+```
+
+Figure 5. Poeciliidae were also more more abundance at all sites (less so at San Fernando and Placedo) in 2017-2018 compared to 2020 baselines. Two sites (Aransas and West Mustang) experienced early bumps in November and December. But most sites (Tranquitas, Mission, Perdido, Placedo, Garcitas, and East Mustang) peaked around April in 2018. Poeciliidae includes Western mosquitofish (*G.affinis*) and sailfin molly (*P.latipinna*).  
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_icta
+```
+
+Figure 6. Ictaluridae were more prevalent in 2017-2018 than in 2020 (zero caught at most sites in 2020). Ictaluridae uniquely appeared at four sites (Tranquitas, Perdido, Garcitas, and West Mustang) in 2017-2018 compared to 2020. At sites containing Ictaluridae baselines in 2020, Ictaluridae populations were higher in 2017-2018 at Aransas and East Mustang. Ictaluridae appear rarely at Mission River in both years. Placedo is the exception to this trend, where Ictaluridae densities were lower after April in 2017-2018 compared to 2020 baselines. Ictaluridae include channel catfish (*I.punctatus*), black bullhead catfish (*A.melas*), yellow bullhead catfish (*A.natalis*), tadpole madtom (*N.gyrinus*), and flathead catfish (*P.olivaris*). 
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_cent
+```
+
+Figure 7. Centrarchid densities were lower at most sites in 2017-2018 compared to 2020. Exceptions include Tranquitas, where Centrarchidae only appear immediately after large floods. Also, East mustang (and Placedo to a small extant) experienced population bumps from November through April. Centrarchidae include Lepomis (sunfish) and Micropterus (bass) genuses.
+
+\newpage
+
+## Species
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_Gaff
+```
+
+Figure 8. Western mosquitofish were more abundant across the region in 2017-2018 compared to 2020. Also, extraordinary population bumps occurred at three sites (Aransas in November as well as Perdido and EM in April).
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_Locu
+```
+
+Figure 9. Spotted gar were more abundant across the region in 2017-2018 compared to 2020 baselines. But their rarity prohibit comparison beyond presence or absence.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_Lcya
+```
+
+Figure 10. Green sunfish densities remained low, but normal throughout the 2017-2018 sampling period.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_Lmac
+```
+
+Figure 11. Bluegill sunfish densities were lower at most sites throughout 2017-2018 compared to 2020. East mustang had an extraordinary peak in bluegill in February of 2018.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_Lmeg
+```
+
+Figure 12. Longear sunfish densities are the first species to display classical disturbance response curves. Longear sunfish populations were extraordinrily high in the first or second month after the hurricane and quickly normalize at four sites (Mission, Perdido, and Garcitas and West Mustang). At other sites, longear population peaks were delayed, occuring Februrary-April at Aransas, Placedo, and East Mustang
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_Laur
+```
+
+Figure 13. Redbreast sunfish densities were relatively low at Wester (arid) sites and relatively high at the Eastern (wet) sites in 2017-2018 compared to 2020 baselines. Redbreast were absent in 2020 at the Mustang sites

@@ -1,0 +1,220 @@
+---
+title: "Hurricane Response Fish Summary Figures"
+author: "Sean Kinard"
+date: "2023-04-04"
+output: 
+  pdf_document: 
+    fig_caption: yes
+    fig_width: 7
+    fig_height: 7
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r , include = F, echo=F, message=F}
+setwd('/home/kinard/Documents/Research/Dissertation/02_Resilience')
+source('R_Scripts/067_LRR_calc_v2.R')
+```
+
+\newpage
+## Figure 1 - Richness vs Rainfall (Quarterly): Regression
+```{r , echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+setwd('/home/kinard/Documents/Research/Dissertation/02_Resilience')
+source('R_Scripts/027_diversity_figures.R')
+richness_vs_rainfall_quarterly
+```
+Figure 1. Species richness of fish communities versus annual rainfall for 2017, 2018, and 2020, divided by quarter of the year. Note larger changes occur over time at sites in the middle of the rainfall gradient. Richness is low at humid sites in the first two quarters of 2020.
+
+\newpage
+## Figure 2 - RDA: Environment (2017, 2018, 2020) [Count-Based]
+```{r , include=F, echo=F, message=F, warning=FALSE}
+setwd('/home/kinard/Documents/Research/Dissertation/02_Resilience')
+source('R_Scripts/047_ordination.R')
+```
+```{r , echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+rda_all_env
+```
+Figure 2. Redundancy Analysis of fish communities (using density data) from 2017, 2018, and 2020. Community centroids are labeled with the annual average precipitation in millimeters. Arrows represent fitted vectors for environmental variables including the following: annual average rainfall, dissolved oxygen, high flow pulse percentage (HFPP), hydrologic flashiness, canopy coverage, nitrate concentration, conductivity, and low flow pulse percentage (LFPP).
+
+\newpage
+## Figure 3 - RDA: Species (2017, 2018, 2020) [Count-Based]
+```{r , echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+rda_all_spe
+```
+Figure 3. Redundancy Analysis of fish communities (using density data) from 2017, 2018, and 2019. Community centroids are labeled with the annual average precipitation in millimeters. Ellipses are drawn using a t-distribution with critical value = 0.1. Site labels colors correspond to ellipse colors. Triangles represent species.
+
+\newpage
+## Figure 5 - RDA: 0-6 months after Hurricane Harvey [Count-Based]
+```{r , echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+rda_all_time_1
+```
+Figure 5. Redundancy analysis of fish communities (using density data) from weeks 0-15 after Hurricane Harvey. Community centroids are labeled with the annual average precipitation in millimeters. Dotted arrows connect communities sequentially (labeled with months after 2017-08-27).
+
+
+\newpage
+## Figure 6 - RDA: 7-12 months after Hurricane Harvey [Count-Based]
+```{r , echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+rda_all_time_2
+```
+Figure 6. Redundancy analysis of fish communities (using density data) from months 7-12 after Hurricane Harvey. Community centroids are labeled with the annual average precipitation in millimeters. Dotted arrows connect communities sequentially (labeled with months after 2017-08-27).
+
+\newpage
+## Figure 7 - RDA: 2020 [Count-Based]
+```{r , echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+rda_all_time_3
+```
+Figure 7. Redundancy analysis of fish communities (using density data) from quarterly sampling in 2020. Community centroids are labeled with the annual average precipitation in millimeters. Dotted arrows connect communities sequentially (labeled with months after 2017-08-27).
+
+\newpage
+## Figure 8 - Density vs Rainfall: Regression Community 
+```{r , echo=F, message=F, warning=FALSE, fig.height=4, fig.width=6, fig.align = 'center'}
+setwd('/home/kinard/Documents/Research/Dissertation/02_Resilience')
+source('R_Scripts/015_density.R')
+density_com_vs_rainfall_annual
+```
+Figure 8. Community density (100m^-2^) versus annual rainfall for 2017, 2018, and 2020.
+
+\newpage
+## figure 9 - Fish Density Response Ratio
+```{r , include=F, echo=F, message=F, warning=FALSE}
+setwd('/home/kinard/Documents/Research/Dissertation/02_Resilience')
+source('R_Scripts/067_LRR_calc_v2.R')
+```
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_com_d100
+```
+Figure 9. Three of six sites show a bump in fish densities in the first 6 months after the hurricane. East Mustang is the only site that didn't experience negative response ratio. Tranquitas experienced a delayed bump in March and April of 2018. West Mustang experienced a modest elevation in fish population untill April 2018. The other six sites show unremarkable response ratios within slightly below baseline ranges.
+
+\newpage
+## Figure 10 - Poeciliidae Density and Average Lengths vs Time
+```{r , echo=F, message=F, warning=F, fig.align = 'center'}
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+source('R_Scripts/000_d_dataframes.R')
+source('R_Scripts/000_biological_scales_comparison.R')
+source('R_Scripts/065_fish_count_length_v_time.R')
+group_scale_plot('family', 'Poeciliidae')
+```
+Figure 10. Poeciliidae density and average total length of Poeciliidae (blue). Values are scaled for simultaneous trend visualization. Recovery bump month 2 on dry side and month 3-4 on the wet side. 2nd Quarter size peak in 2020 is absent in 2018. Winter breeding, except PD.
+
+\newpage
+## Figure 11 - Community Biomass Vs Time
+```{r , include=F, echo=F, message=F, warning=FALSE}
+setwd('/home/kinard/Documents/Research/Dissertation/02_Resilience')
+source('R_Scripts/067_LRR_calc_v2.R')
+```
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_com_B100
+```
+Figure 11. Circles represent a biomass (g/100m^2^) versus time following Hurricane Harvey (2017-2018). Circles are colored to aid visualization of trending biomass above (blue) or below (red) the 2020 quarterly baseline plus or minus one standard deviation (dotted lines). Vertical axes vary to prioritize visualizing trends among sites rather than comparisons between sites.
+
+\newpage
+## Figure 12 - Seasonal Flows
+```{r , echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+rm(list=ls())
+setwd('/home/kinard/Documents/Research/Dissertation/02_Resilience')
+source('R_Scripts/000_daily_discharge_and_storm_stats_1990_2020.R')
+seas_weekly / seas_monthly
+```
+Figure 12. Weekly (above) and Monthly (below) averages divided annual median flow. The lower plot shows points, representing monthly averages for each site from 1990-2020. Lines, formed by a localized smoothing average funciton, highlight seasonal trends in flow across the region. Specifically, Discharges are typically low in February, and August. Discharges are high in May and September. Climatically, seasons take the form of cool-dry (11-3), cool-wet (4-6), hot-dry (7-8), and hot-wet (9-10).
+
+\newpage
+## Figure 13 - Hurricane Harvey Flood Inter-Annual Context
+```{r , echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+hu_context
+```
+Figure 13. Regional average discharge, relative to annual median. Vertical line highlights the day of the year in which Hurricane Harvey struck in 2017. The Hurricane hit in late August, the seasonal drought period. It is not uncommon for a spike in regional flow to occur in September.
+
+\newpage
+## Figure 14 - Hurricane Harvey Site Hydrographs
+```{r , echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+hu_sites
+```
+Figure 14. 2017 hydrographs for each site with a dotted line indicating when Hurricane Harvey made landfall on August 27th, 2017. All sites experienced extraordinary floods except for TR and SF (the driest sites).
+
+\newpage
+## Figure 15 - Hurricane Harvey Flood Duration
+```{r , echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+hu_duration
+```
+Figure 15. Zooming into the period of time immediately after Hurricane Harvey at each site, vertical lines indicate the day of maximum flooding, and the first day flows met annual median dischage (horizontal line).
+
+\newpage
+## Figure 16 - Regional Summer Flood Inter-Annual Context
+```{r , echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+rf_context
+```
+Figure 16. Regional average discharge, relative to annual median. Vertical line highlights the day of the year in which Regional Summer Flood struck in 2018 The Storm hit in late June, preceding hot-dry season. The flood appears one or two orders of magnitude less powerful than those from Hurricane Harvey in the preceding year.
+
+\newpage
+## Figure 17 - Regional Summer Flood Site Hydrographs
+```{r , echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+rf_sites
+```
+Figure 17. 2018 hydrographs for each site with a dotted line indicating when Regional Summer flood began. All sites experienced extraordinary floods except for the most humid site, EM.
+
+\newpage
+## Figure 18 - Regional Summer Flood Flood Duration
+```{r , echo=F, message=F, warning=FALSE, fig.height=7, fig.width=7, fig.align = 'center'}
+rf_duration
+```
+Figure 18. Zooming into the period of time immediately after Regional Summer Flood at each site, vertical lines indicate the day of maximum flooding, and the first day flows met annual median dischage (horizontal line).
+
+\newpage
+
+## Response Ratio Figure Description
+Circles represent the response ratio (x-baseline / baseline) of abundance, diversity, or composition versus time following Hurricane Harvey (2017-2018). The baseline used is 2020 quarterly samples filled with annual means. Circles are colored to aid visualization of trending biomass above 2020 quarterly baseline (cyan), within baseline (grey) +- 1 standard deviation, or below baseline (red). Dark grey circles indicate instances where a particular species was caught at a site for which there was no baseline of comparison in 2020 (i.e none were caught in 2020). A moving average regression is represented by the dotted line. Axes are standardized in most figures, but in some instances (where baselines were absent) axes are not standardized to aid visualization of trends among the sites.
+
+\newpage
+## Figure 19 - Species Richness Response Ratio
+```{r , include=F, echo=F, message=F, warning=FALSE}
+setwd('/home/kinard/Documents/Research/Dissertation/02_Resilience')
+source('R_Scripts/067_LRR_calc_v2.R')
+```
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_com_rich
+```
+Figure 19. Six sites (West of the Garcitas) experienced lower species richness throughout 2017-2018 after the hurricane compared to baselines in 2020. Garcitas and the other wetter sites experienced mostly normal or elevated species richness in 2017-2018 compared to o2020 baselines.
+
+\newpage
+## Figure 20 - Centroid Distance Response Ratio
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_com_cdist
+```
+Figure 20. Composition varied from baseline most  noticeably at three sites in the middle of the rainfall gradient (Aransas, Mission, and Perdido). Since species richness remained relatively low in 2017-2018, compositional differences reflect species replacement rather than addition. However, compositions also varied somewhat at the two wettest sites (West Mustang and East Mustang), likely due to the addition of species, since species richness was relatively elevated in 2017-2018 at these sites. Centroid distances are the euclidean distance from a site's community on a certain date to the 2020 annual average (n=4) in the first 2 axes of an Redudancy Analysis (canonical ordination).
+
+\newpage
+## Figure 21 - Total Fish Density Response Ratio
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_com_d100
+```
+Figure 21. Three of six sites show a bump in fish densities in the first 6 months after the hurricane. East Mustang is the only site that didn't experience negative response ratio. Tranquitas experienced a delayed bump in March and April of 2018. West Mustang experienced a modest elevation in fish population untill April 2018. The other six sites show unremarkable response ratios within slightly below baseline ranges.
+
+\newpage
+## Figure 22 - Poeciliidae (Livebearer) Density Response Ratio
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_poec
+```
+Figure 22. Poeciliidae were also more more abundance at all sites (less so at San Fernando and Placedo) in 2017-2018 compared to 2020 baselines. Two sites (Aransas and West Mustang) experienced early bumps in November and December. But most sites (Tranquitas, Mission, Perdido, Placedo, Garcitas, and East Mustang) peaked around April in 2018. Poeciliidae includes Western mosquitofish (*G.affinis*) and sailfin molly (*P.latipinna*).
+
+\newpage
+## Figure 23 - Centrarchidae (Sunfish and Bass) Density Response Ratio
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_cent
+```
+Figure 23. Centrarchid densities were lower at most sites in 2017-2018 compared to 2020. Exceptions include Tranquitas, where Centrarchidae only appear immediately after large floods. Also, East mustang (and Placedo to a small extant) experienced population bumps from November through April. Centrarchidae include Lepomis (sunfish) and Micropterus (bass) genuses.
+
+\newpage
+## Figure 24 - Leuscicidae (Shiners and Bullhead Minnow) Density Response Ratio
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_leuc
+```
+Figure 24. Leuciscidae were more prevalent throughout the region in 2017-2018 comparied to 2020. Leuciscidae uniquely appeared at two sites (San Fernando and Mission) in 2017-2018 compared to 2020 baselines. Leuciscidae were also elevated for the most part throughout the region. Leuciscidae includes red shiner (*C.lutrensis*), weed shiner (*N.texanus*), bullhead minnow (*P.vigilax*), blacktail shiner (*C.venusta*). 
+
+\newpage
+## Figure 25 - Ictaluridae (Catfsh) Density Response Ratio
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+p_RR_icta
+```
+Figure 6. Ictaluridae were more prevalent in 2017-2018 than in 2020 (zero caught at most sites in 2020). Ictaluridae uniquely appeared at four sites (Tranquitas, Perdido, Garcitas, and West Mustang) in 2017-2018 compared to 2020. At sites containing Ictaluridae baselines in 2020, Ictaluridae populations were higher in 2017-2018 at Aransas and East Mustang. Ictaluridae appear rarely at Mission River in both years. Placedo is the exception to this trend, where Ictaluridae densities were lower after April in 2017-2018 compared to 2020 baselines. Ictaluridae include channel catfish (*I.punctatus*), black bullhead catfish (*A.melas*), yellow bullhead catfish (*A.natalis*), tadpole madtom (*N.gyrinus*), and flathead catfish (*P.olivaris*). 

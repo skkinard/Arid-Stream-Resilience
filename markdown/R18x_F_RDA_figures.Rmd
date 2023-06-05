@@ -1,0 +1,182 @@
+---
+title: "Explore Fish Composition 2017-2018: Figures"
+author: "Sean Kinard"
+date: "2023-02-14"
+output: 
+  pdf_document: 
+    fig_caption: yes
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r R Setup, include = F, echo=F, message=F}
+#------------------------------------------------------------------------------
+# Setup: Clear Global Environment & load tools for analytical scripts
+#------------------------------------------------------------------------------
+
+# Clean Workspace
+rm(list=ls())
+
+# Data Tools
+library(tidyverse)
+library(lubridate)
+library(BiodiversityR)
+library(car)
+
+# Plot Tools
+library(paletteer)
+library(ggsignif)
+library(patchwork)
+library(knitr)
+library("ggpmisc")
+library(ggrepel)
+library(kableExtra)
+library(ggpubr)
+library(ggbiplot)
+
+site_order <- c("TR", "SF", "AR", "MR", "PD", "PL", "GC", "WM", "EM")
+
+my_colors <- c('#F5191CFF', '#E78200FF', '#E8A117FF',
+               '#EABB22FF', '#CBC988FF', '#9FC095FF',
+               '#6BB699FF', '#3DAAA6FF', '#3B99B1FF')
+
+#------------------------------------------------------------------------------
+# End setup
+```
+```{r Analyses, include=F, echo=F, message=F}
+#------------------------------------------------------------------------------
+# Load Scripts to Populate Global Environment with Figures and Tables
+#------------------------------------------------------------------------------
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+
+source('R_Scripts/046_RDA.R')
+
+#------------------------------------------------------------------------------
+# End Analyses
+```
+
+
+\newpage
+
+## Figure 1 - RDA: Environment (2017, 2018, 2020) [Count-Based]
+
+```{r Figure 1, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+RDA_C_env
+```
+
+Figure 1. Redundancy Analysis of fish communities (using density data) from 2017, 2018, and 2019. Community centroids are labeled with the annual average precipitation in millimeters. Ellipses are drawn using a t-distribution with critical value = 0.1. Site labels colors correspond to ellipse colors. White triangles represent species. Black arrows represent fitted vectors for environmental variables including the following: annual average rainfall, dissolved oxygen, high flow pulse percentage (HFPP), hydrologic flashiness, canopy coverage, nitrate concentration, conductivity, and low flow pulse percentage (LFPP).
+
+\newpage
+
+
+## Figure 2 - RDA: Species (2017, 2018, 2020) [Count-Based]
+
+```{r Figure 2, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+RDA_C_spe
+```
+
+Figure 2. Redundancy Analysis of fish communities (using density data) from 2017, 2018, and 2019. Community centroids are labeled with the annual average precipitation in millimeters. Ellipses are drawn using a t-distribution with critical value = 0.1. Site labels colors correspond to ellipse colors. White triangles represent species.
+
+\newpage
+
+## Figure 3 - RDA: Species-Zoomed (2017, 2018, 2020) [Count-Based]
+
+```{r Figure 3, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+RDA_C_spe_zoom
+```
+
+Figure 3. Zoom in on center of redundancy analysis of fish communities (using density data) from 2017, 2018, and 2019. Community centroids are labeled with the annual average precipitation in millimeters. Ellipses are drawn using a t-distribution with critical value = 0.1. Site labels colors correspond to ellipse colors. White triangles represent species.
+
+\newpage
+
+## Figure 4 - RDA: 0-6 months after Hurricane Harvey [Count-Based]
+
+```{r Figure 4, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+RDA_C_time_1
+```
+
+Figure 4. Redundancy analysis of fish communities (using density data) from weeks 0-15 after Hurricane Harvey. Community centroids are labeled with the annual average precipitation in millimeters. Dotted arrows connect communities sequentially (labeled with months after 2017-08-27).
+
+
+\newpage
+
+## Figure 5 - RDA: 7-12 months after Hurricane Harvey [Count-Based]
+
+```{r Figure 5, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+RDA_C_time_2
+```
+
+Figure 5. Redundancy analysis of fish communities (using density data) from months 7-12 after Hurricane Harvey. Community centroids are labeled with the annual average precipitation in millimeters. Dotted arrows connect communities sequentially (labeled with months after 2017-08-27).
+
+\newpage
+
+## Figure 6 - RDA: 2020 [Count-Based]
+
+```{r Figure 6, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+RDA_C_time_3
+```
+
+Figure 6. Redundancy analysis of fish communities (using density data) from quarterly sampling in 2020. Community centroids are labeled with the annual average precipitation in millimeters. Dotted arrows connect communities sequentially (labeled with months after 2017-08-27).
+
+\newpage
+
+## Figure 7 - RDA: Environment (2017, 2018, 2020) [Biomass-Based]
+
+```{r Figure 7, echo=F, echo=F, message=F, warning=FALSE, fig.height=7.5, fig.width=6, fig.align = 'center'}
+RDA_B_env
+```
+
+Figure 7. Redundancy Analysis of fish communities (using biomass data) from 2017, 2018, and 2019. Community centroids are labeled with the annual average precipitation in millimeters. Ellipses are drawn using a t-distribution with critical value = 0.1. Site labels colors correspond to ellipse colors. White triangles represent species. Black arrows represent fitted vectors for environmental variables including the following: annual average rainfall, dissolved oxygen, high flow pulse percentage (HFPP), hydrologic flashiness, canopy coverage, nitrate concentration, conductivity, and low flow pulse percentage (LFPP).
+
+\newpage
+
+
+## Figure 8 - RDA: Species (2017, 2018, 2020) [Biomass-Based]
+
+```{r Figure 8, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+RDA_B_spe
+```
+
+Figure 8. Redundancy Analysis of fish communities (using biomass data) from 2017, 2018, and 2019. Community centroids are labeled with the annual average precipitation in millimeters. Ellipses are drawn using a t-distribution with critical value = 0.1. Site labels colors correspond to ellipse colors. White triangles represent species.
+
+\newpage
+
+## Figure 9 - RDA: Species-Zoomed (2017, 2018, 2020) [Biomass-Based]
+
+```{r Figure 9, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+RDA_B_spe_zoom
+```
+
+Figure 9. Zoom in on center of redundancy analysis of fish communities (using biomass data) from 2017, 2018, and 2019. Community centroids are labeled with the annual average precipitation in millimeters. Ellipses are drawn using a t-distribution with critical value = 0.1. Site labels colors correspond to ellipse colors. White triangles represent species.
+
+\newpage
+
+## Figure 10 - RDA: 0-6 months after Hurricane Harvey [Biomass-Based]
+
+```{r Figure 10, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+RDA_B_time_1
+```
+
+Figure 10. Redundancy analysis of fish communities (using biomass data) from weeks 0-15 after Hurricane Harvey. Community centroids are labeled with the annual average precipitation in millimeters. Dotted arrows connect communities sequentially (labeled with months after 2017-08-27).
+
+
+\newpage
+
+## Figure 11 - RDA: 7-12 months after Hurricane Harvey [Biomass-Based]
+
+```{r Figure 11, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+RDA_B_time_2
+```
+
+Figure 11. Redundancy analysis of fish communities (using biomass data) from months 7-12 after Hurricane Harvey. Community centroids are labeled with the annual average precipitation in millimeters. Dotted arrows connect communities sequentially (labeled with months after 2017-08-27).
+
+\newpage
+
+## Figure 12 - RDA: 2020 [Biomass-Based]
+
+```{r Figure 12, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+RDA_B_time_3
+```
+
+Figure 12. Redundancy analysis of fish communities (using biomass data) from quarterly sampling in 2020. Community centroids are labeled with the annual average precipitation in millimeters. Dotted arrows connect communities sequentially (labeled with months after 2017-08-27).

@@ -1,0 +1,140 @@
+---
+title: "Explore Fish Diversity 2017-2018: Figures"
+author: "Sean Kinard"
+date: "2023-02-09"
+output: 
+  pdf_document: 
+    fig_caption: yes
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r R Setup, include = F, echo=F, message=F}
+#------------------------------------------------------------------------------
+# Setup: Clear Global Environment & load tools for analytical scripts
+#------------------------------------------------------------------------------
+
+# Clean Workspace
+rm(list=ls())
+
+# Data Tools
+library(tidyverse)
+library(lubridate)
+library(BiodiversityR)
+library(car)
+
+# Plot Tools
+library(paletteer)
+library(ggsignif)
+library(patchwork)
+library(knitr)
+library("ggpmisc")
+library(ggrepel)
+library(kableExtra)
+library(ggpubr)
+library(ggbiplot)
+
+site_order <- c("TR", "SF", "AR", "MR", "PD", "PL", "GC", "WM", "EM")
+
+my_colors <- c('#F5191CFF', '#E78200FF', '#E8A117FF',
+               '#EABB22FF', '#CBC988FF', '#9FC095FF',
+               '#6BB699FF', '#3DAAA6FF', '#3B99B1FF')
+
+#------------------------------------------------------------------------------
+# End setup
+```
+
+```{r Analyses, include=F, echo=F, message=F}
+#------------------------------------------------------------------------------
+# Load Scripts to Populate Global Environment with Figures and Tables
+#------------------------------------------------------------------------------
+setwd("/home/kinard/Documents/Research/Dissertation/02_Resilience")
+
+source('R_Scripts/027_diversity_figures.R')
+
+#------------------------------------------------------------------------------
+# End Analyses
+```
+
+\newpage
+
+## Figure 1 - Diversity vs Rainfall: Boxplot
+
+```{r Figure 1, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+div_vs_site
+```
+
+Figure 1. Diversity of fish (species richness, Shannon-Wiener Index, and Simpon's Index) at each sampling location from from 2017, 2018, and 2020. 2017 contains 3 months following hurricane Harvey, 2018
+contains monthly samples from January through October, and 2020 contains
+quarterly sampling.
+
+\newpage
+
+## Figure 2 - Diversity vs Diatom Concentration
+
+```{r Figure 2, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+div_vs_diatoms
+```
+
+Figure 2. Community diversity versus diatom chlorophyll concentrations for 2017, 2018, and 2020. To aid visualization, the horizontal axis is log transformed.
+
+\newpage
+
+## Figure 3 - Diversity vs 2-Week Maximum Discharge
+
+```{r Figure 3, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+div_vs_qmax
+```
+
+Figure 3. Community diversity versus maximum discharge in the two weeks prior to sampling for 2017, 2018, and 2020. To aid visualization, the horizontal axis is log transformed.
+
+\newpage
+
+## Figure 4 - Diversity vs Nitrate Concentrations
+
+```{r Figure 4, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+div_vs_nitrate
+```
+
+Figure 4. Community diversity versus nitrate concentrations for 2017, 2018, and 2020. Both axes are log transformed.
+
+\newpage
+
+## Figure 5 - Diversity vs Time: Community 
+
+```{r Figure 5, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+div_vs_time
+```
+
+Figure 5. Community diversity versus day of the year for 2017, 2018, and 2020. Densities and smoothed regression curves are are colored by annual rainfall and a region-wide (all sites) smoothed regression is in dark grey.
+
+\newpage
+
+## Figure 6 - Diversity vs Rainfall (Annually): Regression
+
+```{r Figure 6, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+div_vs_rainfall_annual
+```
+
+Figure 6. Community diversity versus annual rainfall for 2017, 2018, and 2020.
+
+\newpage
+
+## Figure 7 - Richness vs Rainfall (Quarterly): Regression
+
+```{r Figure 7, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+richness_vs_rainfall_quarterly
+```
+
+Figure 7. Species richness of fish communities versus annual rainfall for 2017, 2018, and 2020, divided by quarter of the year.
+
+\newpage
+
+## Figure 8 - Shannon vs Rainfall (Quarterly): Regression
+
+```{r Figure 8, echo=F, echo=F, message=F, warning=FALSE, fig.height=8, fig.width=6, fig.align = 'center'}
+shannon_vs_rainfall_quarterly
+```
+
+Figure 8. Shannon diversity of fish communities versus annual rainfall for 2017, 2018, and 2020, divided by quarter of the year.

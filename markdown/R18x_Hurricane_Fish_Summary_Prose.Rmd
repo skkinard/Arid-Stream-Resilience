@@ -1,0 +1,99 @@
+---
+title: "Hurricane Response Fish Summary Prose"
+author: "Sean Kinard"
+date: "2023-04-04"
+output: 
+  pdf_document: 
+    fig_caption: yes
+    fig_width: 7
+    fig_height: 7
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r R Setup, include = F, echo=F, message=F}
+setwd('/home/kinard/Documents/Research/Dissertation/02_Resilience')
+source('R_Scripts/067_LRR_calc_v2.R')
+```
+
+## Data Exploration Summary
+
+### Inconsistent Regional Diversity
+Species Richness varies through time. Immediately after the hurricane and throughout 2018, richness is positively related to annual rainfall (**Figure 1**). However, sites in the middle of the precipitation gradient appear to have fallen and recovered to higher numbers than sites on the edges (see the transition of a trough-shaped to hump-shaped parabolic regression from panel to panel). Diversity patterns were different throughout 2020. Overall species richness was lower throughout 2020. In the first and second quarters West and East Mustang sites had lower diversity than Tranquitas and San Fernando, resulting in a hump.
+
+### Straightforward Regional Compositional Changes 
+Sites ordinate in three overlapping clusters including humid sites, transitional sites, and arid sites (**Figures 2 through 7**). Communities at humid sites strongly associate with Longear sunfish (*L.megalotis*) and weakly associate with spotted gar (*L.oculatus*), shiners (*C.venusta* and *N.texanus*), slough darter (*E.gracile*), and channel catfish (*A.natalis*). Perdido is located in the middle of the precipitation gradient and is distinguished by the presence of blackstripe topminnow (*F.notatus*). Largemouth bass (*M.salmoides*) and bluegill sunfish (*L.macrochirus*) appear at PD, MR and humid sites. Communities at arid sites are strongly associated with sailfin molly (*P.latipinna*) and sheepshead minnow (*C.variegatus*) as well as being weakly associated with blue tilapia (*O.aureus*), Mexican tetra (*A.mexicanus*), and gulf killifish (*F.grandis*). Some species, including Mexican tetra and sheepshead minnow only occur West of the Nueces River which may be the current extant of these species' endemic ranges. Communities changes over time were largest in 2017 and early 2018 and changed very little in 2020 by comparison.
+
+### Regional Abundance
+Densities of fish relate negatively with annual rainfall in 2018 and in 2020 (**Figure 8**). However, in 2017 (in the few months after the hurricane), densities were high throughout the region and the trend weakened. It's difficult to tell (without pre-hurricane samples or monthly samples in an off-hurricane year) whether elevated fish counts at the end of 2017 were seasonal or related to the hurricane (**Figure 9**). Six of nine sites had elevated Poeciliid counts in the fourth quarter compared to the third quarter (**Figure 10**), suggesting a seasonal population bump at the end of the year is ordinary.
+
+### Regional Biomass
+Biomass does not appear to relate to annual rainfall, but biomass was greater and varied less in 2020 compared to 2018 (**Figure 11**). Despite intially being low in the first month after the hurricane, biomass recovered throughout the region by month two and showed signs of steady or decline throughout 2018. If the hurricane had created a lasting effect on fish biomass, we might expect gradual increase in 2018 or 2019. Since no sampling took place in 2019, we can't say for certain whether the biomass difference is disturbance related or interannual variation. Lastly, the discrepancy may result from low-balling conversion ratios of the RAPID (2018) forklength data to total length to be consistent with the 2020 data. Biomass variation might also be exagerated by conversion (multplicative effects) but could also be  attributed to insufficient samples in 2020.
+
+### Uneven Hurricane Flooding
+Annual flows vary seasonally with a draw down starting in June and ending at the beginning of September. This dry season is preceded and followed by wet seasons (**Figure 12**). Hydrographs indicate low or no flooding (0 to 10x base flows) at the three driest sites (TR, SF, and AR) (**Figures 13-15**). Modest flooding occurred at West Mustang (10x to 100x base flows). Other sites experienced floods between 100x and 10,000x base flows. Previously mentioned sites with modest floods returned to base flows within days or weeks. Other sites experiencing extraordinary floods returned to base flows after 2-4 months. So flood duration appears to correlate with flood magnitude.
+
+### Widespread but Inconsequential Summer Flood
+A region-wide rainfall event occurred in 2018, causing floods at all monitored sites no more than 10x base flows (**Figures 16-18**). Flood duration ranged from days to weeks at eight sites, but Mission River remained above baseline flows for several months. This event also occurred in the middle of the regions typical 'hot and dry' season in June-July. So although this flood is not extraordinary in magnitude, it was region-wide and it's timing was atypical for it's season. Despite these bolstering qualities, I think the magnitude was insufficient to cause washout of fish, since I do not see changes in fish abundances at community, family, or species levels during June-August of 2018.
+
+### More Species Richness in 2017-2018
+Most sites had lower species richness in 2017-2018, with above baseline bumps occurring in February-May of 2018 at four sites (MR, GC, WM, EM) (**Figure 19**). The synchronized timing of elevated species richness may result from Spring migrations that could have been missed by quarterly sampling in 2020.
+
+### Greater Centroid Distance in 2017-2018
+Distances to the 2020 Centroid were greater throughout 2017-2018 than in 2020, meaning that community compositions in 2017-2018 differed more than intrannual variation in community composition in 2020 (**Figure 20**). As seen below, this is likely attributed to greater prevalence of catfish (Ictaluridae), livebearers (Poeciliidae), and Leuscicidae (Shiners & bullhead minnows) as well as diminished sunfish (Centrarchidae) presence throughout 2017-2018.
+
+### Mixed Total fish Hurricane Response 
+Total fish abundance recovers quickly at most sites within 0-1 months (**Figure 21**).  Population bumps occur at six of nine sites throughout the region, but timings vary one to six months. Two sites (Perdido, and Garcitas) experienced little deviation from baselines in the first six months after the hurricane.
+
+### More Livebearers (Poeciliidae) in 2017-2018
+Livebearers (Poeciliidae) were abundant in 2020, and occurred in even greater numbers at 8/9 sites throughout the 2017-2018 sampling period(**Figure 22**). Placedo was the exception. Population bumps occurred in January at 4/9 sites. Population bumps in livebearers also occurred in 2020 during the fourth quarter at 6/9 sites indicating a possible seasonal trend.
+
+### Less Sunfish and Bass (Centrarchidae) in 2017-2018
+Sunfish were abundant in 2020, but were typically lower throughout 2017-2018 at 5/9 sites(**Figure 23**). A bump in population occured at 4/9 sites immediately after the hurricane, which may speak to a mass migration through streams as sunfish recolonize after the hurricane. Sunfish and bass only occur at Tranquitas immeiately after the hurricane and immediately after the June flood, which would support the claim that many observations following a flood are migrants rather than residents.
+
+### More Shiners and Bullhead Minnow (Leuscicidae) in 2017-2018
+Shiners and bullhead minnows are rare and mostly absent in 2020, but occurred in greater numbers at 7/9 sites throughout 2017-2018 (**Figure 24**). These species uniquely occured at 2/9 sites in the 2017-2018 period compared to 2020. Dr. Hogan has suggested that these distributions may be related to breeding strategy; washed out broadcast spawned larvae may migrate upstream in the months following a large flood.
+
+### More Catfish (Ictaluridae) in 2017-2018
+Catfish were rare and mostly absent in 2020, but occured more frequently and in greater numbers at 7/9 sites throughout 2017-2018 (**Figure 25**). Catfish uniquely occured at 5/9 sites in 2017-2018, and some species like flathead catfish (*P.olivaris*) were only found in the month after the hurricane.
+
+\newpage
+
+## Concerns
+
+### Region-Wide Disturbance?
+Hydrographs indicate major floods only occurred at MR and sites East of MR. It looks like some rain did fall at Tranquitas and Aransas, but neither were extraordinary from rain flow conditions in the month preceding the hurricane. So, at best, Luckily, West Mustang also experienced relatively modest flooding (between 10x and 100x base flow). So it's feasible to control for or at least test for correlation between disturbance effect and disturbance magnitude.
+
+### Missed Meaningful Measures of Resilience
+Magnitude of disturbance appears testable, as most sites are within or below 2020 baselines in October 2017 (1 month after the hurricane). However, testing for recovery intervals may be inappropriate since the temporal scale of sampling is coarse relative to the timescale of fish movement negating detection of variation in response between sites. I'm crushed at the lack of anything resembling a disturbance recovery in the fish data. I've looked at multiple baselines of comparison including 2018 annual mean and 2020 annual mean, but each poses its own issues as statistcally defendable and none produce clear patterns.
+
+### Recovery Migration, Seasonal Migration or None of the Above?
+When present, disturbance effects such as population bumps or dips occur at different times (0-6 months) among sites at community and smaller taxonomic groupings. Sticking with the hurricane angle, one possible explanation for delays could be that the distance to the nearest downstream reservoir varies by site and that those with smaller distances may have responded quickly. However, these results are difficult to isolate from the effects of interannual variation or intraseasonal variation missing in the baseline quarterly sampling during 2020. Is it worth measuring these distances and including them as a predictor?
+
+The sampling structure is different between the 2020 and 2017-2018 data, such that I have resulted to using quarterly samples as a baseline for multiple months accompanied by the variation among the four, 2020 quarterly samples. As such, there is no way to account for interannual variation or intraseasonal variation. 
+
+### Perdido is the only Ephemeral stream
+Perdido presents a multitude of problems. It was reduced to puddles on several occasions in 2018, and was completely dry for half of 2020. So, it seems ineffective to work with. Perdido might also be considered an outlier because it fails to resemble any of our other streams geomorphometrically. It lacks riparian trees. It's channel meanders and shifts from year to year making stationary sensors and even some of our sampling expeditions unreliable. The fish we observe there seem more like stranded migrants than residents. Lastly, it's located exceptionally far from its coastal outlet. I'd hate to remove a site at this point, but if I had to, Perdido (ironically the most natural stream) would be the one to remove.
+
+### The Length Conversion is Risky
+Length and biomass comparisons within 2017-2018 or 2020 data are fine, but comparisons between the data are beleaguered by the different measuring methods used for fish lengths. RAPID sampling used fork lengths and TERRG sampling measured fish using total length. Bradley Strickland tracked down conversion ratios from various sources to compute biomass estimates for the fish. I am skeptical that all the RAPID biomass estimates were less than 2020 baselines of comparison, and would advocate that the conversion ratios be tweaked to produce a normal distribution of residuals when compared to 2020 baselines. This may increase the accuracy of comparisons between years.
+
+\newpage
+
+## Next Steps
+
+### Resistance and Storm Correlation?
+The only resistance metric I can conceive to use is the deviation from baseline in the month immediately after the hurricane. I could test for correlations with flood magnitude and/or duration (which autocorrelate...).
+
+### Distance to reservoirs
+I could trace distances to downstream reservoirs and test for correlation with timing of various species recovery bumps.
+
+### Functional Traits
+I could examine several traits like breeding strategy, but I doubt this would account for the variation in timings of population dynamics among sites.
+
+### Isolate and display altered compositions
+It's difficult to discern which species are driving the observed distances in a complex ordination. In the past, I've used vector correlations and associated p-values. Here, I've gone a step further and looked at time series of populations of various taxonomic families and species to identify the culprits of change. I am also thinking about making an ANOVA table with Tukey HSD comparisons (controling for site) to show how compositions vary between time periods. I'd appreciate any more ideas for visual or tabular ways of displaying compositional differences.
+
+### Advice for writing a failed experiment chapter?
+I'm in serious doubt about whether there is a measurable hurricane-effect within these data. With only 2 years of data, separated by a gap year and altered sampling structure, I've found them insufficient to test any temporal phenomena (even seasonal patterns). The aforementioned 'next steps' seem like wrapping up the last remaining loose ends and proving that I know how to complete the designed analysis. I don't expect to find anything defensible in regards to the RAPID projects original hypotheses. So, what's a PhD student to do with all these reports and analyses at this point?

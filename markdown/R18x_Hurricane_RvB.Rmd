@@ -1,0 +1,172 @@
+---
+title: "Hurricane Response: Fish"
+author: "Sean Kinard"
+date: "2023-02-09"
+output: 
+  pdf_document: 
+    fig_caption: yes
+    fig_width: 7
+    fig_height: 7
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+
+```{r R Setup, include = F, echo=F, message=F}
+setwd('/home/kinard/Documents/Research/Dissertation/02_Resilience')
+source('R_Scripts/067_LRR_calc_v2.R')
+```
+
+### Plot description:
+Circles represent a measure of abundance, diversity, or composition versus time following Hurricane Harvey (2017-2018). Circles are colored to aid visualization of trending biomass above (blue) or below (red) the 2020 quarterly baseline plus or minus one standard deviation (dotted lines). Vertical axes vary to prioritize visualizing trends among sites rather than comparisons between sites.
+
+\newpage
+
+## Community
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_com_B100
+```
+
+Figure 1. Biomass quarterly baselines display site-specific variation, casting doubt on a regional seasonal effect. Biomass was lower at most site in 2017-2018 compared to 2020 baselines. However, West Mustang Creek (and East Mustang after January) maintained higher fish biomass in 2017-2018. Vertical scales vary, but Tranquitas and West Mustang (ranging 0-150) have much lower fish biomass than other sites (ranging 0-1000 g/100m^2^). San Fernando biomass baselines were exceptionally high in May 2020 and might need to be removed for distorting the quarterly baseline and annual mean. Consistently low biomass may have resulted from the translation of forklength to total length in the RAPID data. As is, Biomass is poorly suited for gauging return intervals since values in the test group do not deviate from normal and return consistent with recovery theory.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_com_d100
+```
+
+Figure 2. Fish densities (Fish/100m^2^) vary above and below 2020 baselines following the hurricane. Six of nine sites display a delayed flood-pulse induced bump in fish populations. The delay may come after the bump visible in the invertebrate data.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_com_rich
+```
+
+Figure 3. There are no obvious patterns in species richness recovery after the storm relative to the 2020 baseline. Mostly, richness was lower in 2017-2018 compared to 2020, except at the Mustang sites, where diversity was higher following the hurricane. Mustang sites are located upstream of a large reservoir and possible refuge for recolonization, wheras most other sites are downstream of reservoirs. Contrarily, the overall depreciated diversity may indicate that species richness recovery took longer than the RAPID sampling period.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_com_cdis
+```
+
+Figure 4. Centroid distance from compositional RDA of fish communities was greater in 2017-2018 compared to 2020 quarterly baseline distances. This indicates that compositions throughout the year following the hurricane were different from those in 2020.
+
+\newpage
+
+## Family
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_leuc_d100
+```
+
+Figure 5. Leuciscidae were more prevalent throughout the region in 2017-2018 comparied to 2020. Leuciscidae includes red shiner (*C.lutrensis*), weed shiner (*N.texanus*), bullhead minnow (*P.vigilax*), blacktail shiner (*C.venusta*).  
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_poec_d100
+```
+
+Figure 6. Poeciliidae were also more prevalent at most sites (except Placedo) in 2017-2018 compared to 2020. Poeciliidae includes Western mosquitofish (*G.affinis*) and sailfin molly (*P.latipinna*).
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_icta_d100
+```
+
+Figure 7.Ictaluridae were more prevalent in 2017-2018 than in 2020 (zero caught at most sites in 2020). Ictaluridae include channel catfish (*I.punctatus*), black bullhead catfish (*A.melas*), yellow bullhead catfish (*A.natalis*), tadpole madtom (*N.gyrinus*), and flathead catfish (*P.olivaris*). 
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_cent_d100
+```
+
+Figure 8. Broadly, Centrarchidae were less abundant in 2017-2018 compared to 2020 baselines. Although there were above-baseline densities at San Fernando, Placedo, and East Mustang. Centrarchids are rarely observed at Tranquitas, and only immediately after flood events in 2017-2018. So it may be best removed at this level for time series or trend analysis. Placedo and East Mustang exhibit post-disturbance bumps in centrarchid densities. Centrarchidae include Lepomis (sunfish) and Micropterus (bass) genuses.
+
+\newpage
+
+## Species
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_Gaff_d100
+```
+
+Figure 9. Western mosquitofish appear region-wide, but are more prevalent at the Eastern (wetter) sites. At 5/9 sites, they exhibit extraordinarily high counts in 2017-2018 from October through June, illustrating a population bump in comparison to seasonal and annual 2020 baselines.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_Lcya_d100
+```
+
+Figure 10. Green sunfish densities were initially normal or high after the hurricane, but throughout the rest of the year, their populations were below 2020 baselines. Baselines indicate a seasonal peak in January, which was not observed in 2017-2018. These results may indicate an interruption in a seasonal breeding or recruitment event, where adults or residents were retained, but juveniles or immigrants were hindered by hurricane effects.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_Lmac_d100
+```
+
+Figure 11. Bluegill sunfish densities were lower and varied less by season in 2017-2018 compared to 2020.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_Lmeg_d100
+```
+
+Figure 12. Longear sunfish densities were high values at seven of the sites in the 6 months following the hurricane. Also, longear sunfish infiltrated dry sites only in the first month after the hurricane.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_Laur_d100
+```
+
+Figure 13. Redbreast sunfish densities were relatively low at Wester (arid) sites and relatively high at the Eastern (wet) sites in 2017-2018 compared to 2020 baselines. Redbreast were absent in 2020 at the Mustang sites
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_Lgul_d100
+```
+
+Figure 14. Warmouth sunfish are caught in low numbers (1-3 per 100m^2^), so comparisons of population size are moot. Warmouth were absent at Tranquitas, and were only present seasonally at San Fernando and Aransas. Warmouth were consistently caught East of Aransas, but only in low numbers.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_Msal_d100
+```
+
+Figure 15. Similar to Warmouth sunfish, Largemouth bass are rarely caught and are thus data-deficient for comparisons outside of presence or absence. Perdido is the exception; largemouth bass are regularly caught at Perdido in 2017-2018 and 2020.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_Locu_d100
+```
+
+Figure 16. Spotted gar were only observed in 2017-2018 at Aransas and West Mustang. There was also an influx of gar into East Mustang near the time of the June flood in 2018. Spotted gar appear seasonally in the winter at San Fernando, and Placedo.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_Anat_d100
+```
+
+Figure 17. Except for Placedo, yellow bullhead catfish uniquely appeared throughout the region (six sites) in 2017-2018 compared to 2020.
+
+\newpage
+
+```{r , echo=F, message=F, warning=FALSE, fig.align = 'center'}
+RvB_Ngyr_d100
+```
+
+Figure 18. Tadpole madtom uniquely appeared throughout the region (6 sites) in 2017-2018 compared to 2020.

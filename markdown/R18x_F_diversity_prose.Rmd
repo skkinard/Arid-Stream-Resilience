@@ -1,0 +1,59 @@
+---
+title: "Fish Diversity 2017-2018: Prose"
+author: "Sean Kinard"
+date: "2023-02-13"
+output: 
+  pdf_document: 
+    fig_caption: yes
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+\newpage
+
+## Figure 1 - Diversity vs Rainfall: Boxplot
+In the three months following hurricane Harvey in 2017, fish species richness has a strong linear relationship with annual rainfall. There were several instances of extremely low diversity at TR and MR. EM maintains the highest average during this period, but WM had the maximal species richness in 2017. Taking abundance into accounting comunity diversity changes the pattern in diversity trends. Although drier sites have lower shannon and simpson diversity compared to wetter sites, PD maintains exceptionally high diversity and evenness compared to the other sites in 2017. 
+
+In spite of high richness, the wetter sites have low evenness of individuals within each species. Said another way, wetter sites have several dominant species and many instances of unique species with few indiviuals ('rare' taxa). PD may be a community where common or dominant taxa from either side of the gradient coexist, producing the highest evenness by having more than one dominant species.
+
+In 2018, MR and drier sites (especially TR) have low species richness compared to communities in PD and wetter. The relationship appears non-linear with a step -up occuring from MR to PD. Similar to 2017, incorporating evenness into diversity metrics produces a slightly different pattern. There is a strong linear pattern in average shannon and simpson indices from TR to PD. PD emerges on top, potentially indicating a mixture of dominant taxa from both dry and wet sites. 
+
+In 2020, patterns in diversity change into a hump-shaped curve with lower diversity occuring at rainfall extremes (TR, SF, WM), and maximum diversity occurring in the middle of the rainfall gradient (PD, PL). Indcluding evenness, diversity metrics appear lower at TR and SF compared to the rest of sites, indicating a potential geographic barrier (such as the Nueces River).
+
+## Figure 2 - Diversity vs Diatom Concentration
+There is a negligible or weak negative relation between fish diversity metrics and diatom concentrations.
+
+## Figure 3 - Diversity vs 2-Week Maximum Discharge
+In 2017, maximal discharge prior to sampling is negatively related to fish diversity. In 2018, there is little evidence for a region-wide effect, but controlling for site, may reveal a negative relation. In 2020, maximum discharge prior to sampling appears to have a region-wide positive effect on fish diversity.
+
+Interannual variation in rainfall between 2018, and 2020 may account for inconsistent patterns between years as seen here. For example, if 2020 was a 'dry' year, then pulse discharges prior to sampling would facilitate diversity throught enhanced connectivity (increasing effective island size). In contrast, a year with sufficient rains for enhanced conductivitly, additional discharge may increase mortality rates and displacement of individuals out of streams resutling in lower observed fish diversity.
+
+## Figure 4 - Diversity vs Nitrate Concentrations
+Fish diversity appears to relate negatively with nitrate concentrations at a region and site-scale.
+
+## Figure 5 - Diversity vs Time: Community 
+In 2017, the regional average richness reached a maximum never seen again in either 2018 or 2020. Dry sites reached richness around 11 and extreme wet sites attained richness around 15 in the second month after the hurricane. In 2018, the regional average (~8) was less than in 2020 (~10.5). In 2018, there is a seasonal dip (largely driven by patterns at wet and transition sites) during he summer with elevated diversity in the 4th and 1st quarters of the year. However, in 2020, maximum diversity occurs in quarters 2 and 3 (see shannon and simpson).
+
+In terms of Shannon and Simpson indices, diversity steadily increases throughout 2018 (largely at sites East of MR). The recovery hump in the second month following hurricane Harvey is greatly reduced when including evenness. This points that although there were many species, the distribution of abundance among taxa was highly disproportionate.
+
+In the middle of 2018, PD emerges as the most diverse community, rivaled by MR and PL. These streams in the middle of the rainfall gradient mirror the hump-shaped patterns observed in invertebrate communities.
+
+Patterns through time for wetter sites differ from sites MR and Westward. Drier sites remain stable or slightly decline in quarter 3 and 4 of the year. This contrasts with the steep rish in diversity at wetter sites during quarters 3 and 4.
+
+## Figure 6 - Diversity vs Rainfall (Annual): Regression
+Following the hurricane, fish species richness positively relates with rainfall in 2017, and 2018. In 2017, there may have been a negative hump, largely influenced by an exceptional low catch at MR. In 2018, there is a strong linear relationship, but in 2020, the relationship is altered to a hump-shaped curve with the minimum richness at either end of the rainfall gradient and maximum species richness occurring in the middle. This pattern is mirrored by diversity indices that incorporate evenness.
+
+Sites in the middle of the rainfall gradient exhibit the greatest interannual variation in diversity. Sites at either extreme of the rainfall gradient appear to have maintained stable diversity averages across all years.
+
+## Figure 7 - Richness vs Rainfall (Quarterly): Regression
+Looking at richness vs quarterly provides a higher temporal resolution to the evolution of a negative hump to a positive hump throughout the diversity data through time.
+
+## Figure 8 - Shannon vs Rainfall (Quarterly): Regression
+The positive linear relationship between Shannon diversity and rainfall begins in the later 2017 and continues through the hurricane monitoring surveys (2018). However in 2020, the linear relationship is replaced by a hump-shaped curve with maximal diversity in the middle of the rainfall gradient.
+
+In 2020, wet sites vary widely between quarters from lows in species richnes (~6) in quarter 1 and 2 increasing to highs (~10) in quarter 3 and 4.
+
+
+
+
