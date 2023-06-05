@@ -1,0 +1,181 @@
+Column,Units,Description
+annualrain,cm/yr,average annual total rainfall based on a 50 year record
+annualtemp,oC,average annual air temperature based on a 50 year record
+bank_height_left_mean,m,"mean of four transects: distance from water to first bank shoulder, taken facing upstream on the left side"
+bank_height_left_sd,m,"standard deviation of four transects:distance from water to first bank shoulder, taken facing upstream on the left side"
+bank_height_right_mean,m,"mean of four transects: distance from water to first bank shoulder, taken facing upstream on the left side"
+bank_height_right_sd,m,"standard deviation of four transects:distance from water to first bank shoulder, taken facing upstream on the left side"
+bank_slope_left_mean,degrees,mean of four transects: slope of the left bank in degrees
+bank_slope_left_sd,degrees,standard deviation of four transects:slope of the left bank in degrees
+bank_slope_right_mean,degrees,mean of four transects: slope of the right bank in degrees
+bank_slope_right_sd,degrees,standard deviation of four transects:slope of the right bank in degrees
+basinsize,km2,size of the area draining to the sampling reach
+bedrock_mean,%,"mean of four transects: % of bottom composed of bedrock, visual assessment"
+bedrock_sd,%,"standard deviation of four transects:% of bottom composed of bedrock, visual assessment"
+bfi,-,base flow index: avg of lowest 7 day stretch / average daily flow
+biomass,g/m2,total biomass in g AFDM per m2 on this date
+bluegreen_cyano_mean,µg/cm,"mean of four transects: amount of blue green cyano bacteria per unit area, measured with a bbe Benthotorch"
+bluegreen_cyano_sd,µg/cm,"standard deviation of four transects:amount of blue green cyano bacteria per unit area, measured with a bbe Benthotorch"
+boron_mean,ppm,mean of four transects: concentration of boron in the water
+boron_sd,ppm,standard deviation of four transects:concentration of boron in the water
+boulder_mean,%,"mean of four transects: % of bottom composed of boulder, visual assessment"
+boulder_sd,%,"standard deviation of four transects:% of bottom composed of boulder, visual assessment"
+ca_mean,ppm,mean of four transects: concentration of calcium in the water
+ca_sd,ppm,standard deviation of four transects:concentration of calcium in the water
+canopy_density_left_mean,%,"mean of four transects: percent canopy cover taken by spherical densiometer, taken facing upstream on the right bank"
+canopy_density_left_sd,%,"standard deviation of four transects:percent canopy cover taken by spherical densiometer, taken facing upstream on the right bank"
+canopy_density_mid_mean,%,"mean of four transects: percent canopy cover taken by spherical densiometer, taken facing upstream in the middle of channel"
+canopy_density_mid_sd,%,"standard deviation of four transects:percent canopy cover taken by spherical densiometer, taken facing upstream in the middle of channel"
+canopy_density_right_mean,%,"mean of four transects: percent canopy cover taken by spherical densiometer,  taken facing upstream on right bank"
+canopy_density_right_sd,%,"standard deviation of four transects:percent canopy cover taken by spherical densiometer,  taken facing upstream on right bank"
+canopy_total_mean,%,"mean of four transects: percent canopy cover taken by spherical densiometer,  summation of left, middle, and right readings divided by 3 (e.g. mean value)"
+canopy_total_sd,%,"standard deviation of four transects:percent canopy cover taken by spherical densiometer,  summation of left, middle, and right readings divided by 3 (e.g. mean value)"
+cl_mean,ppm,mean of four transects: concentration of chloride in the water
+cl_sd,ppm,standard deviation of four transects:concentration of chloride in the water
+clay_mean,%,"average of four transects:% of bottom composed of clay, visual assessment"
+clay_sd,%,"standard deviation of four transects:% of bottom composed of clay, visual assessment"
+co3_mean,mg/L,mean of four transects: concentration of carbonate in the water
+co3_sd,mg/L,standard deviation of four transects:concentration of carbonate in the water
+cobble_mean,%,"mean of four transects: % of bottom composed of cobble, visual assessment"
+cobble_sd,%,"standard deviation of four transects:% of bottom composed of cobble, visual assessment"
+collection_date,date (ymd),The date samples were collected
+collection_period,date (ymd),Date approximation for ‘Cycle’ where collection dates within 2 weeks of the first of a month were lumped together as a ‘cycle’
+comments,character,notes on individual samples or sample events
+commonname,character,common name for fish taxa
+conductivity_mean, (µ/cm),"mean of four transects: conductivity of the water, measured with a YSI ProDSS hand held meter"
+conductivity_sd, (µ/cm),"standard deviation of four transects:conductivity of the water, measured with a YSI ProDSS hand held meter"
+corbicula_mean,%,"average of four transects:% of bottom composed of corbicula shells, visual assessment"
+corbicula_sd,%,"standard deviation of four transects: % of bottom composed of corbicula shells, visual assessment"
+cropland,%,percentage of row-crop agriculture in the watershed
+density,individuals/m2,total number of individuals per m2 on this date
+depth_left_mean,m,mean of four transects: depth at left bank
+depth_left_sd,m,standard deviation of four transects:depth at left bank
+depth_mid_mean,m,mean of four transects: depth in thalweg
+depth_mid_sd,m,standard deviation of four transects:depth in thalweg
+depth_mn_mean,m,mean of four transects: mean depth across the stream 
+depth_mn_sd,m,standard deviation of four transects:mean depth across the stream 
+depth_mx_mean,m,mean of four transects: maximum measured depth
+depth_mx_sd,m,standard deviation of four transects:maximum measured depth
+depth_right_mean,m,mean of four transects: depth at the right bank
+depth_right_sd,m,standard deviation of four transects:depth at the right bank
+developedland,%,"percentage of developed land in the watershed (sum of low, medium, and highly developed lands)"
+diatoms_mean,µg/cm,"mean of four transects: amount of diatoms per unit area, measured with a bbe Benthotorch"
+diatoms_sd,µg/cm,"standard deviation of four transects:amount of diatoms per unit area, measured with a bbe Benthotorch"
+do_mg_l_mean,mg/L,mean of four transects: dissolved oxygen in mg/L
+do_mg_l_sd,mg/L,standard deviation of four transects:dissolved oxygen in mg/L
+do_sat_mean,%,mean of four transects: dissolved oxygen in % saturation
+do_sat_sd,%,standard deviation of four transects:dissolved oxygen in % saturation
+doc_mean,mg/L,mean of four transects: dissolved organic carbon in mg/L
+doc_sd,mg/L,standard deviation of four transects:dissolved organic carbon in mg/L
+ec_mean,µS/cm,mean of four transects: 
+ec_sd,µS/cm,standard deviation of four transects:
+family,character,taxonomic family
+flsh,-,Flashiness Index: Cumulative changes in day to day daily flow / cumulative flow for a 20 year daily flow record
+forestland,%,percentage of forested land in the watershed (sum of all forest types)
+frlfsp,-,Frequency of Low Flow Spells: # times where daily discharge drops below the 5th percentile
+genus,character,taxonomic family
+genus_species,character,'Genus’ ‘species'
+gravel_mean,%,"mean of four transects: % of bottom composed of gravel, visual assessment"
+gravel_sd,%,"standard deviation of four transects:% of bottom composed of gravel, visual assessment"
+green_algae_mean,µg/cm,"mean of four transects: amount of green algae per unit area, measured with a bbe Benthotorch"
+green_algae_sd,µg/cm,"standard deviation of four transects:amount of green algae per unit area, measured with a bbe Benthotorch"
+hco3_mean,mg/L,mean of four transects: concentration hydrogen carbonate in the water
+hco3_sd,mg/L,standard deviation of four transects:concentration hydrogen carbonate in the water
+hfpp3,-,High Flow Pulse Percentage 3 : % of time daily flow is above 3 times median daily flow
+hfpp7,-,High Flow Pulse Percentage 7 : % of time daily flow is above 7 times median daily flow
+k_mean,ppm,mean of four transects: concentration potassium in the water
+k_sd,ppm,standard deviation of four transects:concentration potassium in the water
+lat,decimal degrees,latitude
+lengthmm,mm,length of fish
+lfpp,-,Low Flow Pulse Percentage: # times where daily discharge drops below the 25th percentile
+lon,decimal degrees,longitude
+lowest_taxon,character,identifier with the lowest taxon (useful for invertebrates)
+maxdd30,cfs,30 day maximum daily discharge:  Highest daily average flow in 30 consecutive days observed across a 20 year daily flow record
+meanflow,cfs,average daily flow based on a 20 year record for all sites except TRC which is based on a 4 year recod
+medannmaxfl,cfs,Median Annual Max Flow: Median value of maximum daily flow observed each year
+medianflow,cfs,Median Annual Max Flow: Median value of maximum daily flow observed each year
+method,character,type of length (total length or forklength)
+mg_mean,ppm,mean of four transects: concentration magnesium in the water
+mg_sd,ppm,standard deviation of four transects:concentration magnesium in the water
+mindd30,cfs,30 day minimum daily discharge:  Lowest daily average flow in 30 consecutive days observed across a 20 year daily flow record
+na_mean,ppm,mean of four transects: concentration of sodium in the water
+na_sd,ppm,standard deviation of four transects:concentration of sodium in the water
+nh4_n_mean,ppm,mean of four transects: concentration of ammonium-N in the water
+nh4_n_sd,ppm,standard deviation of four transects:concentration of ammonium-N in the water
+no3_n_mean,ppm,average of four transects:concentration of nitrate-N in the water
+no3_n_sd,ppm,standard deviation of four transects:concentration of nitrate-N in the water
+no3n_mean,ppm,mean of four transects: concentration of nitrate-N in the water
+no3n_sd,ppm,standard deviation of four transects:concentration of nitrate-N in the water
+order,character,taxonomic order
+ortho_p_mean,ppm,mean of four transects: concentration of orthophosphate in the water
+ortho_p_sd,ppm,standard deviation of four transects:concentration of orthophosphate in the water
+otherland,%,percentage of remaining land classes (primarily range land and scrub shrub)
+ph_benchtop_mean,-,mean of four transects: pH or acidity or the water measured in water sample in the lab post freezing
+ph_benchtop_sd,-,standard deviation of four transects:pH or acidity or the water measured in water sample in the lab post freezing
+ph_field_mean,-,mean of four transects: ph or acidity or the water measured in the field with a YSI
+ph_field_sd,-,standard deviation of four transects:ph or acidity or the water measured in the field with a YSI
+project,-,RAPID sampling or TERRG sampling
+proportion_sig_power_seasonality,,
+q,cfs,flow at the site on the day of sampling
+q_2w_max,cfs,maximum daily flow during the two week period immediately before day of sampling
+q_2w_med,cfs,median daily flow during the two week period immediately before day of sampling
+q_2w_min,cfs,minimum daily flow during the two week period immediately before day of sampling
+q_2w_mn,cfs,mean daily flow during the two week period immediately before day of sampling
+q_h_2w_max_max,cfs,maximum of the maximum flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_max_med,cfs,median of the maximum flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_max_min,cfs,minimum of the maximum flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_max_mn,cfs,mean of the maximum flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_max_sd,cfs,standard deviation of the maximum flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_mean_max,cfs,maximum of the mean flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_mean_med,cfs,median of the mean flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_mean_min,cfs,minimum of the mean flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_mean_mn,cfs,mean of the mean flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_mean_sd,cfs,standard deviation of the mean flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_med_max,cfs,maximum of the median flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_med_med,cfs,median of the median flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_med_min,cfs,minimum of the median flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_med_mn,cfs,mean of the median flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_med_sd,cfs,standard deviation of the median flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_min_max,cfs,maximum of the minimum flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_min_med,cfs,median of the minimum flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_min_min,cfs,minimum of the minimum flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_min_mn,cfs,mean of the minimum flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_2w_min_sd,cfs,standard deviation of the minimum flow observed in the two weeks prior to the day of the year on which sampling occurred based on a 20 year flow record
+q_h_d_max,cfs,maximum flow for the day of the year that sampling occurred based on a 20 year record for all sites except TRC which is based on a 4 year record
+q_h_d_med,cfs,median flow for the day of the year that sampling occurred based on a 20 year record for all sites except TRC which is based on a 4 year record
+q_h_d_min,cfs,minimum flow for the day of the year that sampling occurred based on a 20 year record for all sites except TRC which is based on a 4 year record
+q_h_d_mn,cfs,average flow for the day of the year that sampling occurred based on a 20 year record for all sites except TRC which is based on a 4 year record
+q_h_d_sd,cfs,standard deviation of flow for the day of the year that sampling occurred based on a 20 year record for all sites except TRC which is based on a 4 year record
+salinity_psu_mean,-,mean of four transects: salinity of the water (calculated from conductivity measurement)
+salinity_psu_sd,-,standard deviation of four transects:salinity of the water (calculated from conductivity measurement)
+sand_mean,%,"mean of four transects: % of bottom composed of sand, visual assessment"
+sand_sd,%,"standard deviation of four transects:% of bottom composed of sand, visual assessment"
+seasonality,-,"M/P: Seasonality is M/P, which is Colwell's measure of contingency (M) standardized by Colwell's within‐season predictability (P). This measures the degree to which the environment varies during the course of a single year. P represents the relative certainty of knowing a state at a given time, and is the sum of constancy and contingency. M describes how closely different states correspond to different time periods within a year. Thus, M contains information about the degree of seasonality experienced by an environment. P is maximized when the environmental phenomenon is constant throughout the year, if the seasonal fluctuation is consistent across all years, or a combination of both. "
+silt_mean,%,"mean of four transects: % of bottom composed of silt, visual assessment"
+silt_sd,%,"standard deviation of four transects:% of bottom composed of silt, visual assessment"
+site_code,-,2-letter abbreviation for sampling location
+site_name,character,full name for the sampling site
+site_period,character,identifer with ‘Site_Code’_’Collection_Period’
+so4_mean,ppm,mean of four transects: concentration of sulfate in the water
+so4_sd,ppm,standard deviation of four transects:concentration of sulfate in the water
+species,character,taxonomic species
+staid,character,Station Identifier for USGS gage
+tdn_mean,mg/L,mean of four transects: concentration of total dissolved nitrogen in the water
+tdn_sd,mg/L,standard deviation of four transects:concentration of total dissolved nitrogen in the water
+temperature_mean,oC,mean of four transects: temperature
+temperature_sd,oC,standard deviation of four transects:temperature
+total_alkalinity_mean,CaCO3/L,mean of four transects: concentration of calcium carbonate in the water
+total_alkalinity_sd,CaCO3/L,standard deviation of four transects:concentration of calcium carbonate in the water
+turbidity_mean,NTU,Turbidity measured in field with YSI
+turbidity_sd,NTU,Turbidity measured in field with YSI
+vardf,-,Variation in Daily Flow (Skewness): mean daily flow / median daily flow
+width_mean,m,mean of four transects: wetted width of the stream
+width_sd,m,standard deviation of four transects:wetted width of the stream
+woody debris_mean,%,"% of bottom composed of woody debris, visual assessment"
+woody debris_sd,%,"% of bottom composed of woody debris, visual assessment"
+flow_RR,-,We assessed the time in days after the storm for streamflow to return to baseline flow (median flow for the entire time series at each site on that date)
+flow_LRR,-,We also computed the log-response ratio of the change by taking the natural log of the maximum post-storm value divided by the baseline value. 
+pre_storm_q,cfs,We also calculated mean discharge in the week preceding the pre-storm
+max_q_hurr,cfs,peak discharge during the storm driven floods.
+prop_ch_q,%,(MaxQ.Hurr - PreStormQ)/PreStormQ 
+storm_rain,inches,"storm rainfall for each site representing the total rainfall received from the hurricane from August 24 to August 30, 2017"
